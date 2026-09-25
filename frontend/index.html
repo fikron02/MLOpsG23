@@ -1,536 +1,1316 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-highest": "#2e353f", "secondary-fixed": "#d8e2ff", "on-tertiary-fixed": "#001e2c", "on-background": "#dce3f0", "on-primary-fixed": "#002022", "primary-container": "#00f0ff", "on-primary-container": "#006970", "on-secondary-fixed-variant": "#004397", "surface-dim": "#0d141d", "primary-fixed-dim": "#00dbe9", "on-tertiary-container": "#00668b", "on-secondary": "#002e6b", "error": "#ffb4ab", "on-surface": "#dce3f0", "tertiary-container": "#aee0ff", "on-primary-fixed-variant": "#004f54", "surface": "#0d141d", "primary": "#dbfcff", "surface-bright": "#333a44", "on-secondary-container": "#00275e", "inverse-on-surface": "#2a313b", "secondary-container": "#508eff", "on-error-container": "#ffdad6", "surface-container-lowest": "#080f18", "surface-container": "#19202a", "surface-container-high": "#242a34", "tertiary-fixed": "#c4e7ff", "secondary": "#aec6ff", "on-tertiary-fixed-variant": "#004c69", "surface-container-low": "#151c26", "outline-variant": "#3b494b", "background": "#0d141d", "tertiary": "#eef7ff", "on-secondary-fixed": "#001a43", "surface-variant": "#2e353f", "on-surface-variant": "#b9cacb", "tertiary-fixed-dim": "#7bd0ff", "secondary-fixed-dim": "#aec6ff", "on-error": "#690005", "outline": "#849495", "on-primary": "#00363a", "error-container": "#93000a", "on-tertiary": "#00354a", "primary-fixed": "#7df4ff", "inverse-surface": "#dce3f0", "inverse-primary": "#006970", "surface-tint": "#00dbe9" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "2rem", "space-xs": "0.25rem", "gutter-sm": "1rem", "gutter-lg": "2rem", "margin-sm": "1rem", "margin-lg": "4rem", "space-xl": "2.5rem", "gutter": "1.5rem", "space-sm": "0.5rem", "space-md": "1rem", "space-lg": "1.5rem" }, "fontFamily": { "label-md": ["Inter"], "display-hero": ["Plus Jakarta Sans"], "body-sm": ["Inter"], "headline-sm": ["Plus Jakarta Sans"], "label-sm": ["Inter"], "body-lg": ["Inter"], "label-lg": ["Inter"], "headline-md": ["Plus Jakarta Sans"], "body-md": ["Inter"], "headline-lg-mobile": ["Plus Jakarta Sans"], "display-hero-mobile": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"] }, "fontSize": { "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }] } } } }</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-[1280px] mx-auto px-margin-lg flex items-center justify-between"><div class="flex items-center gap-space-lg"><a class="flex items-center gap-space-sm" data-path="features" href="#"><img alt="Synthex SaaS Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1W05K1ZDcdCHw9xh5e95NGdij4wyCVWqQ-tn-HGlinax4bMb8iSRnfgpwPgz9ZR82mLdCTh8zcjUq7FnJ2Bvp02t4KBArnBvemKr7ocQelmXR_ZXUT6Mg_jqGiVtJwcrw7Inp-pb8FQSeg_oPla1oSd7iFTX1vrvh5ZPNWmP3K61qMORYZVF0sq2KgteyiZGXbJB2LY74N7qRZKXlJWD4MgfvHjw3N0J7La5LzHz0m64Nx2p2Atxy59iHg"/><span class="font-title-md text-title-md tracking-tight text-primary font-bold">Synthex<span class="text-primary-container">.io</span></span></a><nav class="hidden md:flex items-center gap-space-lg ml-space-md" data-active-classes="text-primary font-bold"><a aria-current="page" class="transition-colors text-primary font-bold" data-path="features" href="#">Features</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="architecture" href="#">Architecture</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="integrations" href="#">Integrations</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="pricing" href="#">Pricing</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="documentation" href="#">Documentation</a></nav></div><div class="flex items-center gap-space-md"><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface px-space-md py-space-sm transition-colors" data-path="sign-in" href="#">Sign In</a><a class="font-label-lg text-label-lg bg-primary-container text-on-primary-container px-space-lg py-space-sm rounded-lg shadow-[0_0_24px_rgba(0,240,255,0.4)] hover:shadow-[0_0_32px_rgba(0,240,255,0.65)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 font-bold" data-path="start-free-trial" href="#">Start Free Trial</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 flex-1 bg-surface"><div class="flex flex-col w-full">
-<!-- AMBIENT LIVING LIGHTING CANVAS -->
-<div class="relative w-full overflow-hidden">
-<!-- Top glowing radial wash -->
-<div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[850px] h-[450px] bg-secondary-container/15 rounded-full blur-[140px] pointer-events-none"></div>
-<div class="absolute top-72 -left-48 w-[600px] h-[400px] bg-primary-container/10 rounded-full blur-[160px] pointer-events-none"></div>
-<div class="absolute top-[1100px] -right-40 w-[600px] h-[500px] bg-secondary-container/10 rounded-full blur-[180px] pointer-events-none"></div>
-<!-- 1. Z-PATTERN HERO SECTION -->
-<section class="relative max-w-[1280px] mx-auto px-margin-sm md:px-margin-lg pt-space-xl pb-24 flex flex-col justify-center">
-<!-- Eyebrow Tag -->
-<div class="flex items-center gap-space-sm mb-space-md">
-<span class="inline-flex items-center gap-space-xs px-3 py-1 rounded-full bg-surface-container-high text-primary text-label-sm font-label-sm uppercase tracking-wider shadow-sm">
-<span class="w-2 h-2 rounded-full bg-primary-container animate-ping"></span>
-          Next-Gen Infrastructure 3.0
-        </span>
-<span class="text-on-surface-variant font-label-sm text-label-sm hidden sm:inline-block">• Ultra-Low Latency Mesh</span>
-</div>
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-center">
-<!-- Z-Pattern Node 1: Left Focal Anchor (Headline + Direct CTAs) -->
-<div class="lg:col-span-7 flex flex-col gap-space-lg">
-<h1 class="font-display-hero text-display-hero text-on-surface tracking-tight leading-[1.08]">
-            Visual Intelligence for <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary-fixed to-primary-container">Enterprise SaaS</span> Workflows
-          </h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl leading-relaxed">
-            Synthex synthesizes telemetry across fragmented microservices into predictive execution graphs. Automate critical deployment pipelines under 5 seconds with zero cognitive drag.
-          </p>
-<!-- High-Contrast Key Elements CTA Area (Principle 2) -->
-<div class="flex flex-wrap items-center gap-space-md pt-space-xs">
-<a class="relative group inline-flex items-center justify-center gap-space-sm px-8 py-4 rounded-xl bg-gradient-to-r from-secondary-container via-primary-container to-primary-fixed-dim text-on-secondary-container font-label-lg text-label-lg font-bold shadow-[0_0_28px_rgba(0,240,255,0.45)] hover:shadow-[0_0_42px_rgba(0,240,255,0.7)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-200" data-path="start-free-trial" href="#">
-<span>Start 14-Day Free Trial</span>
-<span class="material-symbols-outlined text-[20px] transition-transform group-hover:translate-x-1">arrow_forward</span>
-</a>
-<button class="inline-flex items-center gap-space-xs px-6 py-4 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-lg text-label-lg transition-all shadow-sm" id="trigger-demo-modal" type="button">
-<span class="material-symbols-outlined text-primary-container text-[20px]">play_circle</span>
-<span>Watch Interactive Demo</span>
-</button>
-</div>
-<!-- Trust Badges with strict visual cadence -->
-<div class="pt-space-sm flex flex-wrap items-center gap-y-2 gap-x-space-lg text-on-surface-variant font-label-sm text-label-sm">
-<div class="flex items-center gap-1.5">
-<span class="material-symbols-outlined text-primary-container text-[18px]">verified</span>
-<span>No credit card required</span>
-</div>
-<div class="flex items-center gap-1.5">
-<span class="material-symbols-outlined text-primary-container text-[18px]">lock</span>
-<span>256-bit bank-grade encryption</span>
-</div>
-<div class="flex items-center gap-1.5">
-<span class="material-symbols-outlined text-secondary-container text-[18px]">star</span>
-<span class="text-on-surface font-semibold">4.9/5</span>
-<span>(1,200+ Enterprise Teams)</span>
-</div>
-</div>
-</div>
-<!-- Z-Pattern Node 2 & 3: Right Visual Anchor - Realtime Dashboard Preview Card -->
-<div class="lg:col-span-5 relative">
-<!-- Ambient Card Backlight -->
-<div class="absolute -inset-1 bg-gradient-to-br from-primary-container/20 to-secondary-container/10 rounded-2xl blur-xl opacity-75"></div>
-<div class="relative rounded-2xl bg-surface-container-low/90 backdrop-blur-xl p-space-lg shadow-2xl flex flex-col gap-space-md">
-<!-- Window Bar / Header -->
-<div class="flex items-center justify-between pb-space-sm bg-surface-container-lowest/50 px-3 py-2 rounded-lg">
-<div class="flex items-center gap-1.5">
-<div class="w-2.5 h-2.5 rounded-full bg-error-container"></div>
-<div class="w-2.5 h-2.5 rounded-full bg-secondary-container"></div>
-<div class="w-2.5 h-2.5 rounded-full bg-primary-container"></div>
-<span class="ml-2 font-label-sm text-label-sm text-on-surface-variant font-mono">synthex-cluster-prod-01</span>
-</div>
-<div class="flex items-center gap-space-xs bg-surface-container px-2 py-0.5 rounded text-primary-fixed-dim text-label-sm font-label-sm">
-<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
-<span>Sub-5ms</span>
-</div>
-</div>
-<!-- Key Metric Row -->
-<div class="grid grid-cols-2 gap-space-sm">
-<div class="p-space-md rounded-xl bg-surface-container flex flex-col gap-1">
-<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Sync Pipeline</span>
-<span class="font-headline-md text-headline-md text-primary font-bold">4.2 ms</span>
-<span class="font-label-sm text-label-sm text-primary-container flex items-center gap-1">
-<span class="material-symbols-outlined text-[14px]">trending_down</span> -62% latency
-                </span>
-</div>
-<div class="p-space-md rounded-xl bg-surface-container flex flex-col gap-1">
-<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">State Ingestion</span>
-<span class="font-headline-md text-headline-md text-primary font-bold">1.48M/s</span>
-<span class="font-label-sm text-label-sm text-secondary flex items-center gap-1">
-<span class="material-symbols-outlined text-[14px]">arrow_upward</span> 99.999% SLA
-                </span>
-</div>
-</div>
-<!-- Inline SVG Sparkline Chart -->
-<div class="p-space-md rounded-xl bg-surface-container flex flex-col gap-space-xs">
-<div class="flex items-center justify-between text-label-sm font-label-sm">
-<span class="text-on-surface font-semibold">Throughput Topology Flow</span>
-<span class="text-on-surface-variant font-mono">Live WebSocket</span>
-</div>
-<svg class="w-full h-24 text-primary-container" fill="none" viewbox="0 0 320 80" xmlns="http://www.w3.org/2000/svg">
-<defs>
-<lineargradient id="chartGrad" x1="0" x2="0" y1="0" y2="1">
-<stop offset="0%" stop-color="#00f0ff" stop-opacity="0.35"></stop>
-<stop offset="100%" stop-color="#00f0ff" stop-opacity="0"></stop>
-</lineargradient>
-</defs>
-<path d="M0,60 Q25,35 50,45 T100,20 T150,40 T200,15 T250,30 T300,10 L320,18 L320,80 L0,80 Z" fill="url(#chartGrad)"></path>
-<path d="M0,60 Q25,35 50,45 T100,20 T150,40 T200,15 T250,30 T300,10 L320,18" stroke="currentColor" stroke-linecap="round" stroke-width="2.5"></path>
-<circle class="animate-pulse" cx="200" cy="15" fill="#dbfcff" r="4"></circle>
-<circle cx="300" cy="10" fill="#00f0ff" r="4"></circle>
-</svg>
-</div>
-<!-- Active Deployment Status Node -->
-<div class="p-space-sm rounded-lg bg-surface-container-highest/60 flex items-center justify-between">
-<div class="flex items-center gap-space-sm">
-<span class="material-symbols-outlined text-primary-container text-[20px]">hub</span>
-<div class="flex flex-col">
-<span class="font-label-md text-label-md text-on-surface">Auto-Sharding Engine</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant">Global 24 Edge Nodes Operational</span>
-</div>
-</div>
-<span class="px-2 py-1 rounded bg-surface-container-low text-primary-fixed text-label-sm font-label-sm font-mono">ACTIVE</span>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- 2. VISUAL HIERARCHY IN SAAS UI DESIGN SHOWCASE (INSPIRED BY REFERENCE INFOGRAPHIC) -->
-<section class="relative max-w-[1280px] mx-auto px-margin-sm md:px-margin-lg py-20 flex flex-col gap-space-xl">
-<!-- Section Header -->
-<div class="flex flex-col items-center text-center gap-space-xs max-w-2xl mx-auto">
-<span class="font-label-md text-label-md text-primary-container uppercase tracking-widest">Cognitive Architecture</span>
-<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold">
-          Visual Hierarchy in Modern SaaS UI
-        </h2>
-<p class="font-body-md text-body-md text-on-surface-variant">
-          Engineered around empirical eye-tracking behaviors. Guide users from effortless initial scanning to high-velocity conversion with zero visual noise.
-        </p>
-</div>
-<!-- 3-Card Infographic Layout matching Reference Blueprint -->
-<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-lg">
-<!-- CARD 1: F-Pattern & Z-Pattern Layouts -->
-<div class="relative rounded-2xl bg-surface-container-low/80 backdrop-blur-md p-space-lg flex flex-col justify-between group hover:bg-surface-container transition-all duration-300 shadow-lg">
-<div class="flex flex-col gap-space-md">
-<div class="flex items-center gap-space-sm">
-<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center font-title-md text-title-md text-primary-container font-bold shadow-inner">
-                1
-              </div>
-<h3 class="font-title-md text-title-md text-on-surface font-bold">
-                Use F-Pattern &amp; Z-Pattern Layouts
-              </h3>
-</div>
-<!-- Wireframe Diagram Mock -->
-<div class="rounded-xl bg-surface-container-lowest/80 p-space-md flex flex-col gap-3 relative overflow-hidden">
-<!-- Animated Scanning Vectors -->
-<svg class="absolute inset-0 w-full h-full pointer-events-none" fill="none" viewbox="0 0 280 160">
-<!-- Top F-line -->
-<line stroke="#00f0ff" stroke-dasharray="4 4" stroke-opacity="0.8" stroke-width="2" x1="25" x2="255" y1="28" y2="28"></line>
-<polygon fill="#00f0ff" points="255,28 245,24 245,32"></polygon>
-<!-- Diagonal Z-line -->
-<line stroke="#508eff" stroke-dasharray="4 4" stroke-opacity="0.8" stroke-width="2" x1="255" x2="25" y1="28" y2="135"></line>
-<!-- Bottom Z-line -->
-<line stroke="#00f0ff" stroke-dasharray="4 4" stroke-opacity="0.8" stroke-width="2" x1="25" x2="255" y1="135" y2="135"></line>
-<polygon fill="#00f0ff" points="255,135 245,131 245,139"></polygon>
-</svg>
-<!-- Mock Browser Window Inside -->
-<div class="flex items-center gap-1.5 pb-1">
-<span class="w-2 h-2 rounded-full bg-surface-container-highest"></span>
-<span class="w-2 h-2 rounded-full bg-surface-container-highest"></span>
-<span class="w-2 h-2 rounded-full bg-surface-container-highest"></span>
-</div>
-<div class="flex gap-2">
-<div class="w-12 h-10 rounded bg-surface-container-high"></div>
-<div class="flex-1 flex flex-col gap-1.5">
-<div class="w-full h-2.5 rounded bg-surface-container-highest"></div>
-<div class="w-3/4 h-2 rounded bg-surface-container-high"></div>
-</div>
-</div>
-<div class="grid grid-cols-3 gap-2 pt-4">
-<div class="h-10 rounded bg-surface-container-high"></div>
-<div class="h-10 rounded bg-surface-container-high"></div>
-<div class="h-10 rounded bg-surface-container-high"></div>
-</div>
-</div>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant pt-space-md">
-            Align key telemetry and primary conversion steps along natural reading paths to maximize clarity and minimize interaction cost.
-          </p>
-</div>
-<!-- CARD 2: Contrast Key Elements -->
-<div class="relative rounded-2xl bg-surface-container-low/80 backdrop-blur-md p-space-lg flex flex-col justify-between group hover:bg-surface-container transition-all duration-300 shadow-lg">
-<div class="flex flex-col gap-space-md">
-<div class="flex items-center gap-space-sm">
-<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center font-title-md text-title-md text-primary-container font-bold shadow-inner">
-                2
-              </div>
-<h3 class="font-title-md text-title-md text-on-surface font-bold">
-                Contrast Key Elements
-              </h3>
-</div>
-<!-- Wireframe Diagram Mock with Glowing Button -->
-<div class="rounded-xl bg-surface-container-lowest/80 p-space-md flex flex-col items-center justify-center gap-3 relative min-h-[170px]">
-<!-- Mock High Contrast Button -->
-<div class="w-full py-2.5 rounded-lg bg-gradient-to-r from-secondary-container to-primary-container text-on-secondary-container font-label-md text-label-md font-bold text-center shadow-[0_0_20px_rgba(0,240,255,0.6)]">
-                Start Free Trial
-              </div>
-<div class="w-full flex items-center justify-between gap-3 pt-2">
-<div class="flex-1 flex flex-col gap-1">
-<div class="h-2 w-full bg-surface-container-high rounded"></div>
-<div class="h-2 w-4/5 bg-surface-container-high rounded"></div>
-</div>
-<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center">
-<span class="material-symbols-outlined text-primary-container text-[18px]">verified_user</span>
-</div>
-</div>
-<div class="w-full grid grid-cols-2 gap-2">
-<div class="h-8 rounded bg-surface-container"></div>
-<div class="h-8 rounded bg-surface-container"></div>
-</div>
-</div>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant pt-space-md">
-            Make mission-critical value propositions and calls-to-action instantly distinguishable through luminance differential and glow auras.
-          </p>
-</div>
-<!-- CARD 3: Progressive Disclosure -->
-<div class="relative rounded-2xl bg-surface-container-low/80 backdrop-blur-md p-space-lg flex flex-col justify-between group hover:bg-surface-container transition-all duration-300 shadow-lg">
-<div class="flex flex-col gap-space-md">
-<div class="flex items-center gap-space-sm">
-<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center font-title-md text-title-md text-primary-container font-bold shadow-inner">
-                3
-              </div>
-<h3 class="font-title-md text-title-md text-on-surface font-bold">
-                Use Progressive Disclosure
-              </h3>
-</div>
-<!-- Wireframe Diagram Mock with expandable list -->
-<div class="rounded-xl bg-surface-container-lowest/80 p-space-md flex flex-col gap-2 min-h-[170px]">
-<div class="flex items-center justify-between pb-1">
-<span class="font-label-sm text-label-sm text-primary font-bold">Get Started</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant">Step 1 of 3</span>
-</div>
-<div class="p-2 rounded bg-surface-container flex items-center justify-between text-label-sm text-on-surface font-label-sm">
-<span>+ Advanced Features</span>
-<span class="material-symbols-outlined text-[16px] text-on-surface-variant">keyboard_arrow_down</span>
-</div>
-<div class="p-2 rounded bg-surface-container flex items-center justify-between text-label-sm text-on-surface font-label-sm">
-<span>+ Custom Integrations</span>
-<span class="material-symbols-outlined text-[16px] text-on-surface-variant">keyboard_arrow_down</span>
-</div>
-<div class="p-2 rounded bg-surface-container-high/60 flex items-center justify-between text-label-sm text-primary font-label-sm">
-<span>✓ Security Protocol</span>
-<span class="material-symbols-outlined text-[16px] text-primary-container">check_circle</span>
-</div>
-</div>
-</div>
-<p class="font-body-sm text-body-sm text-on-surface-variant pt-space-md">
-            Shield engineers from cognitive overload by deferring advanced controls until explicitly invoked by context.
-          </p>
-</div>
-</div>
-</section>
-<!-- 3. F-PATTERN DETAILED CAPABILITY BODY -->
-<section class="relative max-w-[1280px] mx-auto px-margin-sm md:px-margin-lg py-20 flex flex-col gap-space-xl">
-<!-- F-Pattern Row 1: Real-time Telemetry -->
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-center">
-<div class="lg:col-span-5 flex flex-col gap-space-sm">
-<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-primary-container shadow-md">
-<span class="material-symbols-outlined text-[24px]">speed</span>
-</div>
-<span class="font-label-md text-label-md text-primary-container uppercase tracking-wider">Sub-second Engine</span>
-<h3 class="font-headline-md text-headline-md text-on-surface font-bold">Real-Time Ingestion at Scale</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">
-            Synthex processes billions of events per second with immutable zero-copy buffers. Never let query bottleneck freeze critical incident triage.
-          </p>
-<div class="flex items-center gap-space-md pt-space-xs">
-<div class="flex flex-col">
-<span class="font-headline-sm text-headline-sm text-primary font-bold">99.999%</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant">System Uptime</span>
-</div>
-<div class="w-px h-8 bg-surface-container-highest"></div>
-<div class="flex flex-col">
-<span class="font-headline-sm text-headline-sm text-primary font-bold">&lt; 3.8ms</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant">P99 Query Latency</span>
-</div>
-</div>
-</div>
-<div class="lg:col-span-7">
-<div class="rounded-2xl bg-surface-container p-space-lg shadow-xl flex flex-col gap-space-md">
-<div class="flex items-center justify-between">
-<span class="font-label-md text-label-md text-on-surface font-semibold">Active Node Telemetry Matrix</span>
-<span class="px-2.5 py-1 rounded-full bg-surface-container-low text-primary-container text-label-sm font-label-sm font-mono">24/24 Online</span>
-</div>
-<!-- Bento style micro-grid -->
-<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm">
-<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-1">
-<span class="text-on-surface-variant text-label-sm font-label-sm">EU-West (Frankfurt)</span>
-<span class="text-primary font-title-md font-bold">2.1 ms</span>
-<div class="w-full bg-surface-container-highest h-1 rounded overflow-hidden mt-1">
-<div class="bg-primary-container h-full w-[85%]"></div>
-</div>
-</div>
-<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-1">
-<span class="text-on-surface-variant text-label-sm font-label-sm">US-East (Virginia)</span>
-<span class="text-primary font-title-md font-bold">4.6 ms</span>
-<div class="w-full bg-surface-container-highest h-1 rounded overflow-hidden mt-1">
-<div class="bg-secondary-container h-full w-[92%]"></div>
-</div>
-</div>
-<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-1">
-<span class="text-on-surface-variant text-label-sm font-label-sm">AP-South (Tokyo)</span>
-<span class="text-primary font-title-md font-bold">3.9 ms</span>
-<div class="w-full bg-surface-container-highest h-1 rounded overflow-hidden mt-1">
-<div class="bg-primary-container h-full w-[88%]"></div>
-</div>
-</div>
-</div>
-<!-- Terminal status readout -->
-<div class="p-space-md rounded-xl bg-surface-container-lowest font-mono text-body-sm text-on-surface-variant flex flex-col gap-1">
-<div class="text-primary-fixed flex items-center gap-2">
-<span class="text-primary-container">λ</span> synthex cluster inspect --health-check
-              </div>
-<div class="text-on-surface opacity-80 pl-4">[OK] Cluster consensus reached across 128 Raft participants</div>
-<div class="text-on-surface opacity-80 pl-4">[OK] Encryption keys rotated with zero dropped connections</div>
-</div>
-</div>
-</div>
-</div>
-<!-- F-Pattern Row 2: Automated Workflows & Orchestration -->
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-center pt-10">
-<div class="lg:col-span-7 order-2 lg:order-1">
-<div class="rounded-2xl bg-surface-container p-space-lg shadow-xl flex flex-col gap-space-md">
-<div class="flex items-center justify-between">
-<span class="font-label-md text-label-md text-on-surface font-semibold">Visual Pipeline Constructor</span>
-<span class="text-label-sm font-label-sm text-on-surface-variant">Auto-balancing active</span>
-</div>
-<div class="flex flex-col gap-space-sm">
-<!-- Node step 1 -->
-<div class="flex items-center gap-space-md p-space-md rounded-xl bg-surface-container-low">
-<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container font-mono text-label-md font-bold">01</div>
-<div class="flex-1">
-<div class="font-label-md text-label-md text-on-surface">Kafka Ingest &amp; Schema Validation</div>
-<div class="font-body-sm text-body-sm text-on-surface-variant">Avg latency: 0.8ms • Zero payload serialization loss</div>
-</div>
-<span class="material-symbols-outlined text-primary-container text-[20px]">check_circle</span>
-</div>
-<!-- Node connector line -->
-<div class="w-0.5 h-4 bg-surface-container-highest ml-8"></div>
-<!-- Node step 2 -->
-<div class="flex items-center gap-space-md p-space-md rounded-xl bg-surface-container-low">
-<div class="w-8 h-8 rounded-lg bg-secondary-container/20 flex items-center justify-center text-secondary font-mono text-label-md font-bold">02</div>
-<div class="flex-1">
-<div class="font-label-md text-label-md text-on-surface">Distributed State Consensus Engine</div>
-<div class="font-body-sm text-body-sm text-on-surface-variant">Dynamic shard reconfiguration with Raft quorum</div>
-</div>
-<span class="material-symbols-outlined text-secondary-container text-[20px]">sync</span>
-</div>
-<!-- Node connector line -->
-<div class="w-0.5 h-4 bg-surface-container-highest ml-8"></div>
-<!-- Node step 3 -->
-<div class="flex items-center gap-space-md p-space-md rounded-xl bg-surface-container-low">
-<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container font-mono text-label-md font-bold">03</div>
-<div class="flex-1">
-<div class="font-label-md text-label-md text-on-surface">Global Edge Cache Broadcast</div>
-<div class="font-body-sm text-body-sm text-on-surface-variant">Pushed to 310 Cloudflare / Fastly PoPs concurrently</div>
-</div>
-<span class="material-symbols-outlined text-primary-container text-[20px]">cloud_done</span>
-</div>
-</div>
-</div>
-</div>
-<div class="lg:col-span-5 order-1 lg:order-2 flex flex-col gap-space-sm">
-<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-secondary-container shadow-md">
-<span class="material-symbols-outlined text-[24px]">account_tree</span>
-</div>
-<span class="font-label-md text-label-md text-secondary uppercase tracking-wider">Algorithmic Automation</span>
-<h3 class="font-headline-md text-headline-md text-on-surface font-bold">Self-Healing Pipeline Orchestration</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">
-            Declare declarative target states. Synthex automatically reroutes degraded paths, isolates noisy neighbors, and guarantees strict ordering.
-          </p>
-<div class="pt-space-xs">
-<a class="inline-flex items-center gap-space-xs text-primary-container font-label-md text-label-md hover:underline" data-path="architecture" href="#">
-<span>Explore dynamic routing algorithms</span>
-<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-</a>
-</div>
-</div>
-</div>
-</section>
-<!-- 4. PROGRESSIVE DISCLOSURE ACCORDIONS -->
-<section class="relative max-w-[1000px] mx-auto px-margin-sm md:px-margin-lg py-16 flex flex-col gap-space-lg">
-<div class="flex flex-col items-center text-center gap-space-xs">
-<span class="font-label-md text-label-md text-primary-container uppercase tracking-wider">Deep Dives</span>
-<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold">
-          Technical Specifications on Demand
-        </h2>
-<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
-          Progressively expand architecture guarantees, compliance matrices, and seamless ecosystem connectors.
-        </p>
-</div>
-<div class="flex flex-col gap-space-sm" id="accordion-container">
-<!-- ACCORDION ITEM 1 -->
-<div class="rounded-xl bg-surface-container-low overflow-hidden transition-all duration-200">
-<button class="accordion-trigger w-full flex items-center justify-between p-space-md text-left text-on-surface hover:bg-surface-container transition-colors" type="button">
-<span class="flex items-center gap-space-md">
-<span class="material-symbols-outlined text-primary-container">memory</span>
-<span class="font-headline-sm text-headline-sm">Advanced Zero-Copy Architecture</span>
-</span>
-<span class="material-symbols-outlined transition-transform duration-300 transform accordion-chevron text-on-surface-variant">expand_more</span>
-</button>
-<div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-out bg-surface-container-lowest/40">
-<div class="p-space-lg text-body-md text-on-surface-variant flex flex-col gap-space-sm">
-<p>
-                Synthex uses an eBPF-driven kernel bypass methodology combined with custom io_uring queues to handle networking buffers directly in user space. This drops per-request kernel context switches to zero, maintaining deterministic latency under extreme spikes.
-              </p>
-<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm pt-space-xs font-mono text-body-sm">
-<div class="p-space-sm rounded bg-surface-container text-on-surface">Kernel Bypass: eBPF XDP</div>
-<div class="p-space-sm rounded bg-surface-container text-on-surface">Memory: RingBuffer Zero-Copy</div>
-<div class="p-space-sm rounded bg-surface-container text-on-surface">Consensus: Multi-Raft</div>
-</div>
-</div>
-</div>
-</div>
-<!-- ACCORDION ITEM 2 -->
-<div class="rounded-xl bg-surface-container-low overflow-hidden transition-all duration-200">
-<button class="accordion-trigger w-full flex items-center justify-between p-space-md text-left text-on-surface hover:bg-surface-container transition-colors" type="button">
-<span class="flex items-center gap-space-md">
-<span class="material-symbols-outlined text-primary-container">extension</span>
-<span class="font-headline-sm text-headline-sm">Enterprise Integrations (Slack, AWS, Datadog, GitHub)</span>
-</span>
-<span class="material-symbols-outlined transition-transform duration-300 transform accordion-chevron text-on-surface-variant">expand_more</span>
-</button>
-<div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-out bg-surface-container-lowest/40">
-<div class="p-space-lg text-body-md text-on-surface-variant flex flex-col gap-space-sm">
-<p>
-                Plug into your modern engineering ecosystem in under 60 seconds with bi-directional streaming webhooks and audited SDKs for Go, Rust, TypeScript, and Python.
-              </p>
-<div class="flex flex-wrap gap-space-sm pt-space-xs">
-<span class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface text-label-sm font-label-sm">AWS EventBridge &amp; SQS</span>
-<span class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface text-label-sm font-label-sm">Datadog APM Tracing</span>
-<span class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface text-label-sm font-label-sm">GitHub Actions CI/CD</span>
-<span class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface text-label-sm font-label-sm">Slack Interactive Incidents</span>
-<span class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface text-label-sm font-label-sm">Prometheus &amp; Grafana Exporter</span>
-</div>
-</div>
-</div>
-</div>
-<!-- ACCORDION ITEM 3 -->
-<div class="rounded-xl bg-surface-container-low overflow-hidden transition-all duration-200">
-<button class="accordion-trigger w-full flex items-center justify-between p-space-md text-left text-on-surface hover:bg-surface-container transition-colors" type="button">
-<span class="flex items-center gap-space-md">
-<span class="material-symbols-outlined text-primary-container">gavel</span>
-<span class="font-headline-sm text-headline-sm">Compliance &amp; Data Sovereignty Matrix</span>
-</span>
-<span class="material-symbols-outlined transition-transform duration-300 transform accordion-chevron text-on-surface-variant">expand_more</span>
-</button>
-<div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-out bg-surface-container-lowest/40">
-<div class="p-space-lg text-body-md text-on-surface-variant flex flex-col gap-space-sm">
-<p>
-                Synthex guarantees physical data isolation through dedicated tenant clusters. Customer payload data is encrypted at rest using envelope encryption with customer-managed keys (AWS KMS / HashiCorp Vault).
-              </p>
-<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm pt-space-xs text-center font-label-sm">
-<div class="p-space-sm rounded bg-surface-container text-primary font-semibold">SOC 2 Type II</div>
-<div class="p-space-sm rounded bg-surface-container text-primary font-semibold">ISO 27001 Certified</div>
-<div class="p-space-sm rounded bg-surface-container text-primary font-semibold">HIPAA BAA Ready</div>
-<div class="p-space-sm rounded bg-surface-container text-primary font-semibold">GDPR DPA Compliant</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- 5. BOTTOM HIGH-CONVERSION CTA BANNER -->
-<section class="relative max-w-[1280px] mx-auto px-margin-sm md:px-margin-lg py-20">
-<div class="relative overflow-hidden rounded-3xl bg-gradient-to-b from-surface-container to-surface-container-lowest p-space-xl md:p-16 shadow-[0_0_50px_rgba(0,240,255,0.15)] flex flex-col items-center text-center gap-space-lg">
-<!-- Glowing Specular Aura -->
-<div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[500px] h-[250px] bg-primary-container/25 rounded-full blur-[100px] pointer-events-none"></div>
-<div class="relative z-10 flex flex-col items-center gap-space-xs max-w-2xl">
-<span class="inline-flex items-center gap-space-xs px-3 py-1 rounded-full bg-surface-container-high text-primary-container text-label-sm font-label-sm uppercase tracking-wider">
-<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
-            14-Day Full Feature Trial
-          </span>
-<h2 class="font-headline-lg text-headline-lg text-on-surface font-extrabold tracking-tight mt-space-xs">
-            Ready to 10x your team velocity?
-          </h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant">
-            Connect your telemetry cluster in seconds. No code modifications or infrastructure overhaul needed.
-          </p>
-</div>
-<!-- High-Contrast Conversion Target -->
-<div class="relative z-10 flex flex-col sm:flex-row items-center gap-space-md w-full justify-center">
-<a class="w-full sm:w-auto px-10 py-4 rounded-xl bg-gradient-to-r from-secondary-container via-primary-container to-primary-fixed-dim text-on-secondary-container font-label-lg text-label-lg font-bold shadow-[0_0_35px_rgba(0,240,255,0.6)] hover:shadow-[0_0_50px_rgba(0,240,255,0.85)] hover:scale-[1.03] active:scale-[0.98] transition-all duration-200" data-path="start-free-trial" href="#">
-            Start Free Trial Now
-          </a>
-<a class="w-full sm:w-auto px-8 py-4 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-lg text-label-lg transition-all text-center" data-path="contact-sales" href="#">
-            Schedule Architecture Review
-          </a>
-</div>
-<!-- Social Proof Micro-Counter -->
-<div class="relative z-10 flex items-center gap-space-sm text-on-surface-variant font-label-sm text-label-sm pt-space-xs">
-<div class="flex -space-x-2">
-<div class="w-7 h-7 rounded-full bg-surface-container-high flex items-center justify-center text-primary font-bold text-label-sm">JS</div>
-<div class="w-7 h-7 rounded-full bg-secondary-container/30 flex items-center justify-center text-secondary font-bold text-label-sm">AK</div>
-<div class="w-7 h-7 rounded-full bg-primary-container/30 flex items-center justify-center text-primary-container font-bold text-label-sm">DL</div>
-</div>
-<span class="text-on-surface font-semibold">1,420+ engineers</span>
-<span>deployed to production this week</span>
-</div>
-</div>
-</section>
-</div>
-<!-- INTERACTIVE ACCORDION SCRIPT (Progressive Disclosure) -->
-<script>
-    document.querySelectorAll('.accordion-trigger').forEach(trigger => {
-      trigger.addEventListener('click', () => {
-        const content = trigger.nextElementSibling;
-        const chevron = trigger.querySelector('.accordion-chevron');
-        const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
-
-        // Close all other accordions for focused cognitive rhythm
-        document.querySelectorAll('.accordion-content').forEach(c => c.style.maxHeight = '0px');
-        document.querySelectorAll('.accordion-chevron').forEach(ch => ch.classList.remove('rotate-180'));
-
-        if (!isOpen) {
-          content.style.maxHeight = content.scrollHeight + 'px';
-          chevron.classList.add('rotate-180');
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FIKRON PERFORMANCE | Neo-Tokyo Cyber Motorsport &amp; Dyno Lab</title>
+<!-- Tailwind CSS v3 with Forms & Container Queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration for Custom Cyberpunk Colors & Fonts -->
+<script data-purpose="tailwind-config">
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            cyberDark: '#07070b',
+            cyberCard: '#0d0f18',
+            cyberBorder: '#1a1f33',
+            neonCyan: '#00f0ff',
+            neonMagenta: '#ff0055',
+            neonPink: '#ff2a85',
+            neonAmber: '#ffaa00',
+            matrixGreen: '#00ff66',
+          },
+          fontFamily: {
+            sans: ['Rajdhani', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            display: ['Orbitron', 'sans-serif'],
+            mono: ['Share Tech Mono', 'monospace'],
+          },
+          boxShadow: {
+            cyanGlow: '0 0 25px rgba(0, 240, 255, 0.45)',
+            magentaGlow: '0 0 25px rgba(255, 0, 85, 0.55)',
+            cardHover: '0 10px 30px -10px rgba(0, 240, 255, 0.25)',
+          }
         }
-      });
-    });
-
-    // Auto-open first accordion to demonstrate progressive hierarchy pattern
-    const firstAccordion = document.querySelector('.accordion-trigger');
-    if (firstAccordion) {
-      firstAccordion.click();
+      }
     }
   </script>
-</div></main><footer class="w-full bg-surface-container-lowest"><div class="max-w-[1280px] mx-auto px-margin-lg py-space-xl flex flex-col gap-space-xl"><div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-space-lg pb-space-lg"><div class="flex flex-col gap-space-xs"><div class="flex items-center gap-space-sm"><span class="font-title-md text-title-md text-primary font-bold">Synthex<span class="text-primary-container">.io</span></span><span class="font-label-sm text-label-sm bg-surface-container-high text-primary-fixed-dim px-space-sm py-space-xs rounded">v2.4.0-enterprise</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">High-performance distributed cloud infrastructure engineered for sub-millisecond execution and total data sovereignty.</p></div><div class="flex flex-wrap items-center gap-space-md"><div class="flex items-center gap-space-xs bg-surface-container-low px-space-md py-space-sm rounded-lg"><span class="material-symbols-outlined text-primary-container text-[18px]">verified_user</span><span class="font-label-sm text-label-sm text-on-surface font-semibold">SOC2 Type II</span></div><div class="flex items-center gap-space-xs bg-surface-container-low px-space-md py-space-sm rounded-lg"><span class="material-symbols-outlined text-primary-container text-[18px]">security</span><span class="font-label-sm text-label-sm text-on-surface font-semibold">GDPR Compliant</span></div><div class="flex items-center gap-space-xs bg-surface-container-low px-space-md py-space-sm rounded-lg"><span class="material-symbols-outlined text-primary-container text-[18px]">speed</span><span class="font-label-sm text-label-sm text-on-surface font-semibold">99.99% SLA</span></div></div></div><div class="grid grid-cols-2 md:grid-cols-4 gap-gutter-lg"><div class="flex flex-col gap-space-sm"><span class="font-label-md text-label-md text-primary uppercase tracking-wider">Platform</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="features" href="#">Features</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="architecture" href="#">Architecture</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="integrations" href="#">Integrations</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="pricing" href="#">Pricing</a></div><div class="flex flex-col gap-space-sm"><span class="font-label-md text-label-md text-primary uppercase tracking-wider">Resources</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="documentation" href="#">Documentation</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="api-reference" href="#">API Reference</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="changelog" href="#">System Changelog</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="status" href="#">Network Status</a></div><div class="flex flex-col gap-space-sm"><span class="font-label-md text-label-md text-primary uppercase tracking-wider">Enterprise</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="security-whitepaper" href="#">Security Whitepaper</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="compliance" href="#">Compliance Matrix</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="sla-terms" href="#">SLA Agreement</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="contact-sales" href="#">Contact Sales</a></div><div class="flex flex-col gap-space-sm"><span class="font-label-md text-label-md text-primary uppercase tracking-wider">Legal</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="terms-of-service" href="#">Terms of Service</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="subprocessors" href="#">Subprocessors</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="dpa" href="#">DPA</a></div></div><div class="flex flex-col sm:flex-row items-center justify-between pt-space-lg gap-space-md text-on-surface-variant"><span class="font-body-sm text-body-sm">© 2025 Synthex.io, Inc. All rights reserved.</span><div class="flex items-center gap-space-md"><span class="font-body-sm text-body-sm flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>All systems operational</span></div></div></div></footer></body></html>
+<!-- Google Fonts: Orbitron, Rajdhani, Share Tech Mono -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&amp;family=Rajdhani:wght@500;600;700&amp;family=Share+Tech+Mono&amp;display=swap" rel="stylesheet"/>
+<!-- Core Layout Styles -->
+<style data-purpose="custom-layout">
+    body {
+      background-color: #07070b;
+      color: #e2e8f0;
+      font-family: 'Rajdhani', sans-serif;
+      overflow-x: hidden;
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(0, 240, 255, 0.08) 0%, transparent 60%),
+        radial-gradient(circle at 90% 40%, rgba(255, 0, 85, 0.06) 0%, transparent 50%),
+        linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+    }
+
+    /* Cyber scanlines overlay */
+    .scanlines::before {
+      content: " ";
+      position: absolute;
+      top: 0; left: 0; bottom: 0; right: 0;
+      background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
+      background-size: 100% 4px;
+      z-index: 10;
+      pointer-events: none;
+      opacity: 0.6;
+    }
+
+    /* Neon glowing text */
+    .neon-text-cyan {
+      text-shadow: 0 0 10px rgba(0, 240, 255, 0.7), 0 0 20px rgba(0, 240, 255, 0.4);
+    }
+    .neon-text-magenta {
+      text-shadow: 0 0 10px rgba(255, 0, 85, 0.8), 0 0 25px rgba(255, 0, 85, 0.4);
+    }
+
+    /* Cyber button clip-paths */
+    .cyber-clip {
+      clip-path: polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%);
+    }
+    .cyber-clip-badge {
+      clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%);
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #07070b;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1a1f33;
+      border-radius: 4px;
+      border: 1px solid #00f0ff;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-neonCyan selection:text-black">
+<!-- BEGIN: AnnouncementBar -->
+<aside class="w-full bg-[#0d0f18]/90 border-b border-cyberBorder/80 px-4 py-1.5 text-xs font-mono tracking-wider text-slate-400 flex items-center justify-between" data-purpose="garage-ticker">
+<div class="container mx-auto flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="inline-flex items-center gap-1.5 text-matrixGreen">
+<span class="w-2 h-2 rounded-full bg-matrixGreen animate-ping"></span>
+<span>4 DYNO BAYS ONLINE</span>
+</span>
+<span class="hidden md:inline text-slate-600">|</span>
+<span class="hidden md:inline text-slate-300">SHIBUYA UNDERGROUND LAB // REAL-TIME TELEMETRY ACTIVE</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-neonCyan">JP: +81 (3) 8921-FIKR</span>
+<span class="text-slate-600">|</span>
+<span class="text-xs text-neonMagenta font-bold">STAGE 3 TUNING SLOTS OPEN</span>
+</div>
+</div>
+</aside>
+<!-- END: AnnouncementBar -->
+<!-- BEGIN: MainHeader -->
+<header class="sticky top-0 z-50 backdrop-blur-xl bg-cyberDark/90 border-b border-cyberBorder/60 transition-all duration-300" data-purpose="navigation">
+<div class="container mx-auto px-4 lg:px-8 h-20 flex items-center justify-between">
+<!-- Brand Logo -->
+<a class="flex items-center gap-3 group" href="#">
+<div class="relative w-10 h-10 bg-gradient-to-br from-neonCyan via-cyberDark to-neonMagenta p-[1.5px] rounded-lg cyber-clip">
+<div class="w-full h-full bg-cyberDark flex items-center justify-center font-display font-black text-xl text-white tracking-tighter">
+<span class="text-neonCyan">F</span><span class="text-neonMagenta">P</span>
+</div>
+</div>
+<div class="flex flex-col">
+<span class="font-display font-black tracking-widest text-lg md:text-xl text-white flex items-center gap-1">
+            FIKRON <span class="text-neonCyan">PERFORMANCE</span>
+</span>
+<span class="text-[9px] font-mono tracking-widest text-neonMagenta uppercase">
+            フィクロン・パフォーマンス // TOKYO GARAGE
+          </span>
+</div>
+</a>
+<!-- Desktop Navigation Links -->
+<nav class="hidden lg:flex items-center gap-8 font-medium text-sm tracking-widest uppercase text-slate-300">
+<a class="hover:text-neonCyan transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-neonCyan after:transition-all" href="#hero">Home</a>
+<a class="hover:text-neonCyan transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-neonCyan after:transition-all" href="#services">Services</a>
+<a class="text-neonCyan font-bold hover:text-white transition-colors flex items-center gap-1.5" href="#dyno-lab">
+<span class="w-1.5 h-1.5 rounded-full bg-neonCyan animate-pulse"></span>
+          Dyno Simulator
+        </a>
+<a class="hover:text-neonCyan transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-neonCyan after:transition-all" href="#builds">Builds</a>
+<a class="hover:text-neonCyan transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-neonCyan after:transition-all" href="#packages">Packages</a>
+<a class="hover:text-neonCyan transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-neonCyan after:transition-all" href="#about">About</a>
+</nav>
+<!-- Action Buttons -->
+<div class="flex items-center gap-4">
+<button class="relative inline-flex items-center justify-center px-6 py-2.5 text-xs font-mono font-bold tracking-widest text-black bg-neonCyan hover:bg-white transition-all duration-300 shadow-cyanGlow cyber-clip uppercase" onclick="toggleBookingModal(true)">
+<span class="mr-2">⚡</span> BOOK NOW
+        </button>
+<!-- Mobile Menu Toggle Button -->
+<button class="lg:hidden p-2 text-slate-400 hover:text-neonCyan border border-cyberBorder rounded-md" id="mobile-menu-btn" onclick="toggleMobileMenu()">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+</div>
+<!-- Mobile Slideout Navigation -->
+<div class="hidden lg:hidden border-b border-cyberBorder bg-cyberDark/95 px-6 py-5 flex flex-col gap-4 font-mono text-sm uppercase" id="mobile-menu">
+<a class="text-slate-200 hover:text-neonCyan" href="#hero" onclick="toggleMobileMenu()">01 // Home</a>
+<a class="text-slate-200 hover:text-neonCyan" href="#services" onclick="toggleMobileMenu()">02 // Services</a>
+<a class="text-neonCyan font-bold" href="#dyno-lab" onclick="toggleMobileMenu()">03 // Dyno Simulator &amp; Sound</a>
+<a class="text-slate-200 hover:text-neonCyan" href="#builds" onclick="toggleMobileMenu()">04 // Featured Builds</a>
+<a class="text-slate-200 hover:text-neonCyan" href="#packages" onclick="toggleMobileMenu()">05 // Performance Packages</a>
+<a class="text-slate-200 hover:text-neonCyan" href="#about" onclick="toggleMobileMenu()">06 // Shibuya Workshop</a>
+<button class="mt-2 w-full py-3 bg-neonMagenta text-white font-bold cyber-clip" onclick="toggleMobileMenu(); toggleBookingModal(true)">
+        RESERVE DYNO BAY NOW
+      </button>
+</div>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: HeroSection -->
+<section class="relative min-h-[85vh] lg:min-h-[92vh] flex items-center justify-center overflow-hidden border-b border-cyberBorder/60 scanlines" data-purpose="hero-banner" id="hero">
+<!-- Hero Background Image from PRD DataStore Snapshot -->
+<div class="absolute inset-0 z-0">
+<img alt="Fikron Performance JDM Cyberpunk Neon Garage" class="w-full h-full object-cover object-center opacity-40 mix-blend-screen scale-105 transform hover:scale-100 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBudwfHI0j1SKsVELUPFfDjdh-YrLaSyTeM5GTfAs6XFnrkS9SUMiILxv6UgyJyG1syzEpac0jh2p9BR1gWGkDPPJu7b2hR1RdvpW6JNCdmZST7-MjQ8m7qDevaJeIPur3KPMso23KTmCAP_yivL2NwWrghgKi2BMXHHYHBxtX4jokQ4hkjzO8_O7DWSujfCWKZrh8gDvGNam_OhQRM5mHBs1ouNtb8BbT0zl2suC-uxQrhM0pXrRtp"/>
+<!-- Vignette and color grading overlays -->
+<div class="absolute inset-0 bg-gradient-to-t from-cyberDark via-cyberDark/70 to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-cyberDark via-cyberDark/80 to-transparent"></div>
+<div class="absolute -top-32 -left-32 w-96 h-96 bg-neonCyan/20 rounded-full blur-[130px] pointer-events-none"></div>
+<div class="absolute -bottom-32 -right-32 w-96 h-96 bg-neonMagenta/20 rounded-full blur-[130px] pointer-events-none"></div>
+</div>
+<!-- Hero Content -->
+<div class="container mx-auto px-4 lg:px-8 relative z-20 py-16">
+<div class="max-w-3xl">
+<!-- Japanese Subheader Tag -->
+<div class="inline-flex items-center gap-2 px-3 py-1.5 bg-cyberCard/90 border border-neonCyan/40 rounded-sm cyber-clip-badge mb-6 backdrop-blur-md">
+<span class="w-2 h-2 rounded-full bg-neonCyan animate-ping"></span>
+<span class="font-mono text-xs tracking-widest text-neonCyan uppercase font-bold">速さと情熱、究極の調律。 // NEO-TOKYO JDM TUNING</span>
+</div>
+<!-- Big Display Title -->
+<h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-black uppercase tracking-tight text-white leading-[1.05] mb-4">
+          BUILT FOR <br class="hidden sm:inline"/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-neonMagenta via-neonPink to-neonCyan neon-text-magenta">
+            SPEED
+          </span><br/>
+          DRIVEN BY <span class="text-white neon-text-cyan">PASSION</span>
+</h1>
+<!-- Subtitle Description -->
+<p class="text-base sm:text-lg lg:text-xl text-slate-300 font-medium max-w-2xl leading-relaxed mb-8">
+          Premium performance tuning and bespoke custom builds for top-tier JDM machines. 
+          Engineered in Shibuya, Tokyo. Calibrated on our dual-retarder hub dynos to dominate streets and circuits.
+        </p>
+<!-- CTA Action Buttons -->
+<div class="flex flex-wrap items-center gap-4 sm:gap-6">
+<a class="px-8 py-3.5 bg-neonCyan text-black font-mono font-bold text-sm tracking-widest uppercase cyber-clip hover:bg-white hover:shadow-cyanGlow transition-all duration-300 flex items-center gap-2" href="#builds">
+<span>EXPLORE BUILDS</span>
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+<button class="px-8 py-3.5 bg-cyberCard/80 text-white font-mono font-bold text-sm tracking-widest uppercase border border-slate-700 cyber-clip hover:border-neonMagenta hover:text-neonMagenta transition-all duration-300 flex items-center gap-2" onclick="toggleBookingModal(true)">
+<span>BOOK DIAGNOSTIC</span>
+<span class="text-neonMagenta">››</span>
+</button>
+</div>
+<!-- Mini Live Badge Stats in Hero -->
+<div class="mt-12 pt-8 border-t border-slate-800/80 grid grid-cols-3 gap-4 max-w-lg">
+<div>
+<div class="font-mono text-2xl font-bold text-neonCyan">340+</div>
+<div class="text-[11px] font-mono uppercase tracking-wider text-slate-400">GT-R &amp; Supras Built</div>
+</div>
+<div>
+<div class="font-mono text-2xl font-bold text-neonMagenta">1,400 <span class="text-xs">WHP</span></div>
+<div class="text-[11px] font-mono uppercase tracking-wider text-slate-400">Max Workshop Record</div>
+</div>
+<div>
+<div class="font-mono text-2xl font-bold text-white">0.01 <span class="text-xs">DEG</span></div>
+<div class="text-[11px] font-mono uppercase tracking-wider text-slate-400">ECU Ignition Precision</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Floating Cyber Telemetry Tag in Bottom Right -->
+<div class="hidden xl:block absolute bottom-8 right-8 z-20 bg-cyberCard/90 border border-cyberBorder p-4 rounded-lg font-mono text-xs backdrop-blur-md">
+<div class="flex items-center justify-between gap-6 mb-2 border-b border-cyberBorder/60 pb-1">
+<span class="text-slate-400">STATUS:</span>
+<span class="text-matrixGreen flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-matrixGreen"></span> READY FOR LAUNCH
+        </span>
+</div>
+<div class="text-slate-300">LATENCY: <span class="text-neonCyan">1.2ms (CAN-BUS)</span></div>
+<div class="text-slate-300">DYNO TEMPERATURE: <span class="text-neonMagenta">21.4°C [SHIBUYA LAB]</span></div>
+</div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: InteractiveCategoryBar -->
+<section class="py-14 bg-[#0a0c14] border-b border-cyberBorder/80" data-purpose="services-category-bar" id="services">
+<div class="container mx-auto px-4 lg:px-8">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-8">
+<div>
+<span class="font-mono text-xs uppercase tracking-widest text-neonCyan block mb-1">TUNING CAPABILITIES // 調律機能</span>
+<h2 class="font-display text-2xl sm:text-3xl font-black text-white uppercase tracking-wider">ENGINEERING DISCIPLINES</h2>
+</div>
+<p class="text-slate-400 text-sm max-w-md mt-2 md:mt-0 font-medium">
+          From full engine block blueprinting to millisecond custom ignition mapping, our technicians execute motorsport-grade modifications.
+        </p>
+</div>
+<!-- 6 Cyber Category Cards (Matches PRD Layout & Icons) -->
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+<!-- Category 1: Engine Build -->
+<div class="bg-cyberCard/90 border border-cyberBorder hover:border-neonCyan p-4 rounded-lg transition-all duration-300 group hover:-translate-y-1">
+<div class="w-12 h-12 rounded bg-neonCyan/10 border border-neonCyan/30 flex items-center justify-center text-neonCyan mb-3 group-hover:bg-neonCyan group-hover:text-black transition-colors">
+<!-- Engine Block SVG -->
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h3 class="font-display font-bold text-sm tracking-wider text-white uppercase group-hover:text-neonCyan transition-colors">ENGINE BUILD</h3>
+<p class="text-xs text-slate-400 mt-1 leading-normal font-sans">Forged internals, stroker kits, dynamic balancing.</p>
+<span class="mt-3 text-[10px] font-mono text-neonCyan flex items-center gap-1 uppercase tracking-wider">SPEC 01 ›</span>
+</div>
+<!-- Category 2: Turbo Systems -->
+<div class="bg-cyberCard/90 border border-cyberBorder hover:border-neonMagenta p-4 rounded-lg transition-all duration-300 group hover:-translate-y-1">
+<div class="w-12 h-12 rounded bg-neonMagenta/10 border border-neonMagenta/30 flex items-center justify-center text-neonMagenta mb-3 group-hover:bg-neonMagenta group-hover:text-white transition-colors">
+<!-- Turbo SVG -->
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<circle cx="12" cy="12" r="9" stroke-width="2"></circle>
+<path d="M12 7v5l3 3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h3 class="font-display font-bold text-sm tracking-wider text-white uppercase group-hover:text-neonMagenta transition-colors">TURBO SYSTEMS</h3>
+<p class="text-xs text-slate-400 mt-1 leading-normal font-sans">Twin-scroll, billet wheels, electronic wastegates.</p>
+<span class="mt-3 text-[10px] font-mono text-neonMagenta flex items-center gap-1 uppercase tracking-wider">SPEC 02 ›</span>
+</div>
+<!-- Category 3: ECU Tuning -->
+<div class="bg-cyberCard/90 border border-cyberBorder hover:border-neonCyan p-4 rounded-lg transition-all duration-300 group hover:-translate-y-1">
+<div class="w-12 h-12 rounded bg-neonCyan/10 border border-neonCyan/30 flex items-center justify-center text-neonCyan mb-3 group-hover:bg-neonCyan group-hover:text-black transition-colors">
+<!-- Chip / ECU SVG -->
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 3v2m6-2v2M9 19v2m6-2v2M3 9h2m-2 6h2m16-6h2m-2 6h2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h3 class="font-display font-bold text-sm tracking-wider text-white uppercase group-hover:text-neonCyan transition-colors">ECU TUNING</h3>
+<p class="text-xs text-slate-400 mt-1 leading-normal font-sans">MoTeC, Haltech, EcuTek dual-map flex-fuel tuning.</p>
+<span class="mt-3 text-[10px] font-mono text-neonCyan flex items-center gap-1 uppercase tracking-wider">SPEC 03 ›</span>
+</div>
+<!-- Category 4: Suspension -->
+<div class="bg-cyberCard/90 border border-cyberBorder hover:border-neonMagenta p-4 rounded-lg transition-all duration-300 group hover:-translate-y-1">
+<div class="w-12 h-12 rounded bg-neonMagenta/10 border border-neonMagenta/30 flex items-center justify-center text-neonMagenta mb-3 group-hover:bg-neonMagenta group-hover:text-white transition-colors">
+<!-- Suspension / Spring SVG -->
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 2v4m0 12v4M8 8l8 2m-8 3l8 2m-8 3l8 2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h3 class="font-display font-bold text-sm tracking-wider text-white uppercase group-hover:text-neonMagenta transition-colors">SUSPENSION</h3>
+<p class="text-xs text-slate-400 mt-1 leading-normal font-sans">Ohlins TTX, corner balancing, custom kinematics.</p>
+<span class="mt-3 text-[10px] font-mono text-neonMagenta flex items-center gap-1 uppercase tracking-wider">SPEC 04 ›</span>
+</div>
+<!-- Category 5: Exhaust Systems -->
+<div class="bg-cyberCard/90 border border-cyberBorder hover:border-neonCyan p-4 rounded-lg transition-all duration-300 group hover:-translate-y-1">
+<div class="w-12 h-12 rounded bg-neonCyan/10 border border-neonCyan/30 flex items-center justify-center text-neonCyan mb-3 group-hover:bg-neonCyan group-hover:text-black transition-colors">
+<!-- Exhaust SVG -->
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h3 class="font-display font-bold text-sm tracking-wider text-white uppercase group-hover:text-neonCyan transition-colors">EXHAUST SYSTEM</h3>
+<p class="text-xs text-slate-400 mt-1 leading-normal font-sans">Full titanium, pie-cut valvetronic active sound.</p>
+<span class="mt-3 text-[10px] font-mono text-neonCyan flex items-center gap-1 uppercase tracking-wider">SPEC 05 ›</span>
+</div>
+<!-- Category 6: Custom Fabrication -->
+<div class="bg-cyberCard/90 border border-cyberBorder hover:border-neonMagenta p-4 rounded-lg transition-all duration-300 group hover:-translate-y-1">
+<div class="w-12 h-12 rounded bg-neonMagenta/10 border border-neonMagenta/30 flex items-center justify-center text-neonMagenta mb-3 group-hover:bg-neonMagenta group-hover:text-white transition-colors">
+<!-- Fabrication / Welding SVG -->
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h3 class="font-display font-bold text-sm tracking-wider text-white uppercase group-hover:text-neonMagenta transition-colors">FABRICATION</h3>
+<p class="text-xs text-slate-400 mt-1 leading-normal font-sans">TIG welded titanium cages, aero splitters &amp; diffusers.</p>
+<span class="mt-3 text-[10px] font-mono text-neonMagenta flex items-center gap-1 uppercase tracking-wider">SPEC 06 ›</span>
+</div>
+</div>
+</div>
+</section>
+<!-- END: InteractiveCategoryBar -->
+<!-- BEGIN: LiveTelemetryStats -->
+<section class="py-14 bg-cyberDark relative overflow-hidden border-b border-cyberBorder/60" data-purpose="telemetry-banner">
+<div class="container mx-auto px-4 lg:px-8">
+<div class="flex flex-col lg:flex-row items-center justify-between gap-8 bg-gradient-to-r from-cyberCard/90 via-[#101426] to-cyberCard/90 border border-cyberBorder p-6 lg:p-8 rounded-xl shadow-2xl relative">
+<div class="absolute -top-10 -right-10 w-40 h-40 bg-neonCyan/10 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Left Column: Title & Description -->
+<div class="max-w-md">
+<div class="flex items-center gap-2 text-neonCyan font-mono text-xs tracking-widest uppercase mb-1">
+<span class="w-2 h-2 bg-neonCyan rounded-full animate-ping"></span>
+            PROVEN WORKBENCH TELEMETRY
+          </div>
+<h2 class="font-display text-2xl lg:text-3xl font-black text-white tracking-wide">
+            REAL NUMBERS. <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-neonMagenta to-neonPink">REAL PERFORMANCE.</span>
+</h2>
+<p class="text-xs text-slate-400 mt-2 font-mono">
+            Every build is dyno-validated with calibrated wideband lambda sensors, knock headphones, and high-frequency intake pressure data.
+          </p>
+<button class="mt-4 inline-flex items-center gap-2 text-xs font-mono font-bold text-neonCyan hover:text-white uppercase tracking-wider transition-colors" onclick="document.getElementById('dyno-lab').scrollIntoView({behavior: 'smooth'})">
+<span>VIEW DYNO SPECS &amp; SIMULATOR</span>
+<span>››</span>
+</button>
+</div>
+<!-- Right Column: 4 Live Metric Blocks (852 HP, 768 LB-FT, 1.32 LAT G, 8200 RPM) -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-4 w-full lg:w-auto">
+<!-- Metric 1: HP -->
+<div class="bg-black/60 border border-cyberBorder p-4 rounded-lg text-center min-w-[120px]">
+<div class="font-mono text-3xl lg:text-4xl font-black text-neonCyan neon-text-cyan" id="metric-hp">852</div>
+<div class="text-[11px] font-mono font-bold uppercase text-white mt-1">HP</div>
+<div class="text-[9px] font-mono text-slate-500 uppercase tracking-widest">Peak Power</div>
+</div>
+<!-- Metric 2: Torque -->
+<div class="bg-black/60 border border-cyberBorder p-4 rounded-lg text-center min-w-[120px]">
+<div class="font-mono text-3xl lg:text-4xl font-black text-neonMagenta neon-text-magenta" id="metric-tq">768</div>
+<div class="text-[11px] font-mono font-bold uppercase text-white mt-1">LB-FT</div>
+<div class="text-[9px] font-mono text-slate-500 uppercase tracking-widest">Max Torque</div>
+</div>
+<!-- Metric 3: G-Force -->
+<div class="bg-black/60 border border-cyberBorder p-4 rounded-lg text-center min-w-[120px]">
+<div class="font-mono text-3xl lg:text-4xl font-black text-white" id="metric-g">1.32</div>
+<div class="text-[11px] font-mono font-bold uppercase text-white mt-1">LAT G</div>
+<div class="text-[9px] font-mono text-slate-500 uppercase tracking-widest">Corner Force</div>
+</div>
+<!-- Metric 4: Redline RPM -->
+<div class="bg-black/60 border border-cyberBorder p-4 rounded-lg text-center min-w-[120px]">
+<div class="font-mono text-3xl lg:text-4xl font-black text-neonCyan" id="metric-rpm">8200</div>
+<div class="text-[11px] font-mono font-bold uppercase text-white mt-1">RPM</div>
+<div class="text-[9px] font-mono text-slate-500 uppercase tracking-widest">Redline</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: LiveTelemetryStats -->
+<!-- BEGIN: VirtualDynoSimulator [AKSI GACOR #1] -->
+<section class="py-16 bg-[#080910] border-b border-cyberBorder/80 relative" data-purpose="virtual-dyno-simulator" id="dyno-lab">
+<div class="container mx-auto px-4 lg:px-8">
+<!-- Section Header -->
+<div class="text-center max-w-2xl mx-auto mb-10">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-neonCyan/10 border border-neonCyan/40 rounded text-neonCyan font-mono text-xs tracking-widest mb-2">
+<span>⚡ AKSI GACOR: WEB AUDIO VIRTUAL DYNO</span>
+</div>
+<h2 class="font-display text-3xl lg:text-4xl font-black text-white uppercase tracking-wider">
+          NEO-TOKYO DYNO LAB &amp; REV SIMULATOR
+        </h2>
+<p class="text-slate-400 text-sm mt-2 font-mono">
+          Select machine &amp; tuning stage. Hold down the gas pedal to trigger live Web Audio synthesis, exhaust flames, boost spike, and sweeping tachometer!
+        </p>
+</div>
+<!-- Dyno Cockpit Console -->
+<div class="bg-cyberCard border border-cyberBorder rounded-2xl p-6 lg:p-8 shadow-2xl relative">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<!-- Column 1: Configurator Selectors -->
+<div class="lg:col-span-4 space-y-6">
+<!-- Vehicle Selector -->
+<div>
+<label class="block font-mono text-xs text-neonCyan uppercase tracking-widest mb-2">1. Select Machine</label>
+<div class="grid grid-cols-2 gap-2" id="car-selector-buttons">
+<button class="car-btn active-car px-3 py-2.5 bg-black/60 border border-neonCyan text-white text-xs font-mono text-left rounded hover:border-neonCyan transition-all flex items-center justify-between" data-car="gtr" onclick="setSimCar('gtr')">
+<span>GT-R R35 Nismo</span>
+<span class="text-[9px] text-neonCyan">VR38DETT</span>
+</button>
+<button class="car-btn px-3 py-2.5 bg-black/60 border border-cyberBorder text-slate-300 text-xs font-mono text-left rounded hover:border-neonCyan transition-all flex items-center justify-between" data-car="supra" onclick="setSimCar('supra')">
+<span>Supra A90</span>
+<span class="text-[9px] text-slate-400">B58 TWIN</span>
+</button>
+<button class="car-btn px-3 py-2.5 bg-black/60 border border-cyberBorder text-slate-300 text-xs font-mono text-left rounded hover:border-neonCyan transition-all flex items-center justify-between" data-car="rx7" onclick="setSimCar('rx7')">
+<span>RX-7 FD3S</span>
+<span class="text-[9px] text-slate-400">13B-REW</span>
+</button>
+<button class="car-btn px-3 py-2.5 bg-black/60 border border-cyberBorder text-slate-300 text-xs font-mono text-left rounded hover:border-neonCyan transition-all flex items-center justify-between" data-car="civic" onclick="setSimCar('civic')">
+<span>Civic Type R</span>
+<span class="text-[9px] text-slate-400">K20C1 VTEC</span>
+</button>
+</div>
+</div>
+<!-- Tuning Stage Selector -->
+<div>
+<label class="block font-mono text-xs text-neonMagenta uppercase tracking-widest mb-2">2. Tuning Calibrations</label>
+<div class="space-y-2">
+<label class="flex items-center justify-between p-2.5 bg-black/40 border border-cyberBorder rounded cursor-pointer hover:border-slate-500">
+<div class="flex items-center gap-3">
+<input class="text-neonCyan focus:ring-0" name="tune-stage" onchange="setSimStage('stock')" type="radio" value="stock"/>
+<span class="text-xs font-mono text-slate-300">STAGE 0: OEM Stock Factory Map</span>
+</div>
+<span class="text-xs font-mono text-slate-500">~565 HP</span>
+</label>
+<label class="flex items-center justify-between p-2.5 bg-black/40 border border-cyberBorder rounded cursor-pointer hover:border-slate-500">
+<div class="flex items-center gap-3">
+<input class="text-neonCyan focus:ring-0" name="tune-stage" onchange="setSimStage('stage2')" type="radio" value="stage2"/>
+<span class="text-xs font-mono text-slate-300">STAGE 2: Full Bolt-On + E85 Flex</span>
+</div>
+<span class="text-xs font-mono text-neonCyan">+155 HP</span>
+</label>
+<label class="flex items-center justify-between p-2.5 bg-black/40 border border-neonMagenta/60 bg-neonMagenta/5 rounded cursor-pointer">
+<div class="flex items-center gap-3">
+<input checked="" class="text-neonMagenta focus:ring-0" name="tune-stage" onchange="setSimStage('stage3')" type="radio" value="stage3"/>
+<span class="text-xs font-mono text-white font-bold">STAGE 3: Twin Turbos + Billet Internals</span>
+</div>
+<span class="text-xs font-mono text-neonMagenta font-bold">+287 HP</span>
+</label>
+</div>
+</div>
+<!-- Lock Setup Button -->
+<button class="w-full py-3 bg-neonMagenta hover:bg-white text-white hover:text-black font-mono font-bold text-xs tracking-widest uppercase transition-all duration-300 cyber-clip" onclick="toggleBookingModal(true)">
+              LOCK THIS SETUP &amp; BOOK DYNO BAY
+            </button>
+</div>
+<!-- Column 2: Interactive Tachometer & Dyno Gauges -->
+<div class="lg:col-span-5 flex flex-col items-center justify-center p-4 bg-black/70 border border-cyberBorder rounded-xl relative overflow-hidden">
+<!-- Exhaust Flame Animation Canvas Container -->
+<div class="absolute top-2 right-4 text-xs font-mono text-neonMagenta opacity-0 transition-opacity duration-150 flex items-center gap-1 font-bold" id="flame-effect">
+<span>🔥 2-STEP / ANTI-LAG FLAME POPPING!</span>
+</div>
+<!-- Simulated SVG Analog / Cyber Tachometer -->
+<div class="relative w-64 h-64 sm:w-72 sm:h-72 flex items-center justify-center">
+<!-- Circular SVG dial -->
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 200 200">
+<!-- Background track -->
+<circle cx="100" cy="100" fill="transparent" r="80" stroke="#141829" stroke-dasharray="377" stroke-dashoffset="75" stroke-linecap="round" stroke-width="12"></circle>
+<!-- RPM Indicator Arc -->
+<circle class="transition-all duration-100 ease-out" cx="100" cy="100" fill="transparent" id="tachometer-arc" r="80" stroke="#00f0ff" stroke-dasharray="377" stroke-dashoffset="377" stroke-linecap="round" stroke-width="12"></circle>
+</svg>
+<!-- Inner Digital Readout -->
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+<span class="text-[10px] font-mono tracking-widest text-slate-500 uppercase">ENGINE RPM</span>
+<span class="font-mono text-4xl sm:text-5xl font-black text-white tracking-tight" id="rpm-digital">0950</span>
+<span class="text-[11px] font-mono text-neonCyan mt-0.5 tracking-wider font-bold">IDLE CAN-BUS ACTIVE</span>
+<div class="mt-2 flex items-center gap-2 text-[10px] font-mono">
+<span class="text-slate-400">BOOST: <span class="text-neonMagenta font-bold" id="boost-readout">0.0 PSI</span></span>
+</div>
+</div>
+</div>
+<!-- Gas Pedal "Hold to Rev" Button -->
+<div class="mt-4 w-full max-w-xs">
+<button class="w-full py-4 bg-gradient-to-r from-neonCyan via-sky-400 to-neonCyan text-black font-display font-black text-sm tracking-widest uppercase rounded shadow-cyanGlow active:scale-95 transition-all select-none cursor-pointer" id="gas-pedal-btn">
+                HOLD TO REV (GAS PEDAL) ⚡
+              </button>
+<p class="text-[10px] font-mono text-slate-400 text-center mt-2">
+                Uses Web Audio API to synthesize raw exhaust harmonics &amp; blow-off valve!
+              </p>
+</div>
+</div>
+<!-- Column 3: Live Dyno Power Graph Output -->
+<div class="lg:col-span-3 bg-black/60 border border-cyberBorder p-4 rounded-xl flex flex-col justify-between h-full min-h-[280px]">
+<div>
+<div class="flex items-center justify-between border-b border-cyberBorder/60 pb-2 mb-3">
+<span class="font-mono text-xs uppercase text-slate-300">DYNO TELEMETRY</span>
+<span class="text-[10px] font-mono text-matrixGreen">LIVE HARNESS</span>
+</div>
+<!-- Output Statistics -->
+<div class="space-y-3 font-mono">
+<div>
+<div class="text-[10px] text-slate-500 uppercase">Simulated Output</div>
+<div class="text-2xl font-black text-neonCyan" id="dyno-sim-hp">852 WHP</div>
+</div>
+<div>
+<div class="text-[10px] text-slate-500 uppercase">Wheel Torque</div>
+<div class="text-xl font-black text-neonMagenta" id="dyno-sim-tq">768 LB-FT</div>
+</div>
+<div>
+<div class="text-[10px] text-slate-500 uppercase">Peak Boost Target</div>
+<div class="text-base font-bold text-white" id="dyno-sim-boost">28.4 PSI (Twin EFR)</div>
+</div>
+<div>
+<div class="text-[10px] text-slate-500 uppercase">Fuel Map Mixture</div>
+<div class="text-xs font-mono text-matrixGreen">E85 Ethanol (Flex Tuned)</div>
+</div>
+</div>
+</div>
+<!-- Mini Live Sparkline / Graph Indicator -->
+<div class="mt-4 pt-3 border-t border-cyberBorder">
+<div class="flex justify-between text-[10px] font-mono text-slate-500 mb-1">
+<span>POWER CURVE</span>
+<span class="text-neonCyan">DYNO BAY #02</span>
+</div>
+<div class="h-14 w-full bg-[#07070c] rounded border border-slate-800 flex items-end px-1 gap-1">
+<div class="w-1/12 bg-neonCyan/40 h-2 rounded-t"></div>
+<div class="w-1/12 bg-neonCyan/50 h-3 rounded-t"></div>
+<div class="w-1/12 bg-neonCyan/60 h-4 rounded-t"></div>
+<div class="w-1/12 bg-neonCyan/70 h-6 rounded-t"></div>
+<div class="w-1/12 bg-neonCyan/80 h-8 rounded-t"></div>
+<div class="w-1/12 bg-neonCyan h-10 rounded-t"></div>
+<div class="w-1/12 bg-neonCyan h-11 rounded-t"></div>
+<div class="w-1/12 bg-neonMagenta h-12 rounded-t animate-pulse"></div>
+<div class="w-1/12 bg-neonMagenta h-12 rounded-t"></div>
+<div class="w-1/12 bg-neonMagenta h-10 rounded-t"></div>
+<div class="w-1/12 bg-neonMagenta/70 h-8 rounded-t"></div>
+<div class="w-1/12 bg-red-600 h-6 rounded-t"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: VirtualDynoSimulator -->
+<!-- BEGIN: FeaturedBuildsShowcase [Hotspots & Quick Specs] -->
+<section class="py-16 bg-cyberDark border-b border-cyberBorder/80" data-purpose="featured-builds" id="builds">
+<div class="container mx-auto px-4 lg:px-8">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
+<div>
+<span class="font-mono text-xs uppercase tracking-widest text-neonMagenta block mb-1">PROVEN TRACK &amp; STREET WEAPONS // 作品</span>
+<h2 class="font-display text-3xl sm:text-4xl font-black text-white uppercase tracking-wider">FEATURED BUILDS</h2>
+</div>
+<div class="mt-4 md:mt-0 flex items-center gap-2">
+<span class="text-xs font-mono text-slate-400">FILTER SPEC:</span>
+<button class="px-3 py-1 bg-neonCyan text-black font-mono text-xs font-bold rounded">ALL</button>
+<button class="px-3 py-1 bg-cyberCard border border-cyberBorder text-slate-300 font-mono text-xs hover:border-neonCyan rounded">GT-R</button>
+<button class="px-3 py-1 bg-cyberCard border border-cyberBorder text-slate-300 font-mono text-xs hover:border-neonCyan rounded">SUPRA</button>
+<button class="px-3 py-1 bg-cyberCard border border-cyberBorder text-slate-300 font-mono text-xs hover:border-neonCyan rounded">ROTARY</button>
+</div>
+</div>
+<!-- Builds Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Build Card 1: Nissan GT-R R35 -->
+<article class="bg-cyberCard border border-cyberBorder hover:border-neonCyan rounded-xl overflow-hidden group transition-all duration-300 flex flex-col justify-between">
+<div class="relative h-56 bg-slate-900 overflow-hidden">
+<!-- Using the snapshot car image as primary high-res representation -->
+<img alt="Nissan GT-R R35 Midnight Demon" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOKeNX4XAKKNenH0OAmwXjgA12YDpQNxLS-u8grEQ8GcZnm72T-swzXXSn4I84PrbrahGa9ljTnN9o5D1n6KASSshpfJ8AKWfR5wJQzkZdZQ8QzdSnxRL9FiumCik0TMexq0Di7r_5B-wYtw4lRFvHB4eeS5pMIYla6PauE1i6CLG5oeUPwHpO8UocbzwEb_P7Y9XOg1iqa2P7BGgwqB9HZyZAp8Z7igRguqozqbuHJOVrryMyt6Ws"/>
+<div class="absolute inset-0 bg-gradient-to-t from-cyberCard via-transparent to-transparent"></div>
+<div class="absolute top-3 left-3 bg-black/80 backdrop-blur-md px-2.5 py-1 rounded text-[11px] font-mono font-bold text-neonCyan border border-neonCyan/40">
+              STAGE 3 // 852 HP
+            </div>
+<div class="absolute top-3 right-3 bg-neonMagenta text-white px-2 py-0.5 rounded text-[10px] font-mono font-bold">
+              STREET RECORD
+            </div>
+</div>
+<div class="p-5 flex-1 flex flex-col justify-between">
+<div>
+<div class="text-[11px] font-mono text-slate-400 uppercase tracking-widest">NISSAN GT-R R35 NISMO</div>
+<h3 class="font-display text-xl font-black text-white group-hover:text-neonCyan transition-colors">PROJECT MIDNIGHT DEMON</h3>
+<!-- Component Hotspot Badges -->
+<div class="mt-4 flex flex-wrap gap-1.5">
+<span class="cursor-pointer text-[10px] font-mono bg-cyberDark border border-slate-700 hover:border-neonCyan text-slate-300 px-2 py-1 rounded transition-colors" onclick="showHotspot('Twin Garrett G30 Turbos', '+320 HP Gain over OEM, Ceramic Ball Bearings')">
+                  ⚙️ Twin Garrett G30
+                </span>
+<span class="cursor-pointer text-[10px] font-mono bg-cyberDark border border-slate-700 hover:border-neonCyan text-slate-300 px-2 py-1 rounded transition-colors" onclick="showHotspot('Titanium 102mm Exhaust', 'Pie-cut handmade in Tokyo, saving 22kg')">
+                  🔥 102mm Ti Exhaust
+                </span>
+<span class="cursor-pointer text-[10px] font-mono bg-cyberDark border border-slate-700 hover:border-neonCyan text-slate-300 px-2 py-1 rounded transition-colors" onclick="showHotspot('Haltech Elite 2500', 'Flex fuel real-time ignition and launch control')">
+                  💻 Haltech ECU
+                </span>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-cyberBorder flex items-center justify-between">
+<div class="font-mono text-xs text-slate-400">0-100 KM/H: <span class="text-white font-bold">2.4 SEC</span></div>
+<button class="text-xs font-mono font-bold text-neonCyan hover:underline flex items-center gap-1" onclick="toggleBookingModal(true, 'GT-R R35 Midnight Demon Package')">
+                BUILD SIMILAR ›
+              </button>
+</div>
+</div>
+</article>
+<!-- Build Card 2: Toyota Supra A90 -->
+<article class="bg-cyberCard border border-cyberBorder hover:border-neonMagenta rounded-xl overflow-hidden group transition-all duration-300 flex flex-col justify-between">
+<div class="relative h-56 bg-slate-900 overflow-hidden">
+<img alt="Toyota Supra A90 Neo Runner" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 mix-blend-luminosity hover:mix-blend-normal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1FRLINopw7soKmnXZ5qfxnN50PhG6rYQqXWDscUXdA9AFYSWnR54zOv5oYqBkNuJIikR4z_31sM-WW5EBcLluUmiGsZctrgThAKaCd8Zhk99tKwhdBsToLEjfxURoRqXLWdO_9QrUfoRmwFXpNaHazbPVeNHIytilCkFSkQXiejz-qu4b1MElBIE6OMoic01DgVtpo5Mk_OmG-urL1soupH-7QPci8UN87jGCqNtJIwvQgbBXMT5I"/>
+<div class="absolute inset-0 bg-gradient-to-t from-cyberCard via-transparent to-transparent"></div>
+<div class="absolute top-3 left-3 bg-black/80 backdrop-blur-md px-2.5 py-1 rounded text-[11px] font-mono font-bold text-neonMagenta border border-neonMagenta/40">
+              STAGE 2+ // 680 HP
+            </div>
+<div class="absolute top-3 right-3 bg-cyberDark text-neonCyan border border-neonCyan/40 px-2 py-0.5 rounded text-[10px] font-mono">
+              E85 FLEX
+            </div>
+</div>
+<div class="p-5 flex-1 flex flex-col justify-between">
+<div>
+<div class="text-[11px] font-mono text-slate-400 uppercase tracking-widest">TOYOTA SUPRA A90 GR</div>
+<h3 class="font-display text-xl font-black text-white group-hover:text-neonMagenta transition-colors">PROJECT NEO RUNNER</h3>
+<div class="mt-4 flex flex-wrap gap-1.5">
+<span class="cursor-pointer text-[10px] font-mono bg-cyberDark border border-slate-700 hover:border-neonMagenta text-slate-300 px-2 py-1 rounded transition-colors" onclick="showHotspot('Pure800 Hybrid Turbo', 'CNC machined compressor housing for instant spool')">
+                  ⚙️ Pure800 Billet Turbo
+                </span>
+<span class="cursor-pointer text-[10px] font-mono bg-cyberDark border border-slate-700 hover:border-neonMagenta text-slate-300 px-2 py-1 rounded transition-colors" onclick="showHotspot('CSF Intake Manifold Intercooler', 'Dual pass billet aluminum charge cooler core')">
+                  ❄️ CSF Billet Cooler
+                </span>
+<span class="cursor-pointer text-[10px] font-mono bg-cyberDark border border-slate-700 hover:border-neonMagenta text-slate-300 px-2 py-1 rounded transition-colors" onclick="showHotspot('KW Clubsport 3-Way', 'Independent bump and rebound damping for Fuji Speedway')">
+                  🏁 KW Clubsport 3-Way
+                </span>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-cyberBorder flex items-center justify-between">
+<div class="font-mono text-xs text-slate-400">1/4 MILE: <span class="text-white font-bold">9.8 SEC</span></div>
+<button class="text-xs font-mono font-bold text-neonMagenta hover:underline flex items-center gap-1" onclick="toggleBookingModal(true, 'Supra A90 Neo Runner Package')">
+                BUILD SIMILAR ›
+              </button>
+</div>
+</div>
+</article>
+<!-- Build Card 3: Mazda RX-7 FD3S -->
+<article class="bg-cyberCard border border-cyberBorder hover:border-neonCyan rounded-xl overflow-hidden group transition-all duration-300 flex flex-col justify-between">
+<div class="relative h-56 bg-slate-900 overflow-hidden">
+<img alt="Mazda RX-7 FD Tokyo Ghost" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUqI35GUebYcFm3URLqT5IThGhKf2-U8tr3Dt8rF4c6fD3pYYu-Bu5oDR6PBXlnJi_EXXG8zokeSIv1vO58htDJt1aDAUPkgiItH0vnZpaFjxce5PI7KP36it0aRZvvTtlVEvFjZIbTficv0Nr7mielK1tU9R1ZHLJfh1Qb4__1XaVyfrQN-CRxlfACaCPGPXbdmB8-V9VM76SWpOCJOK5Ck3Zs3eR7TzEdQ7T1Pummag4c0MY6PeR"/>
+<div class="absolute inset-0 bg-gradient-to-t from-cyberCard via-transparent to-transparent"></div>
+<div class="absolute top-3 left-3 bg-black/80 backdrop-blur-md px-2.5 py-1 rounded text-[11px] font-mono font-bold text-neonCyan border border-neonCyan/40">
+              BRIDGEPORT // 520 HP
+            </div>
+<div class="absolute top-3 right-3 bg-neonCyan text-black px-2 py-0.5 rounded text-[10px] font-mono font-bold">
+              9,000 RPM
+            </div>
+</div>
+<div class="p-5 flex-1 flex flex-col justify-between">
+<div>
+<div class="text-[11px] font-mono text-slate-400 uppercase tracking-widest">MAZDA RX-7 FD3S TYPE-R</div>
+<h3 class="font-display text-xl font-black text-white group-hover:text-neonCyan transition-colors">PROJECT TOKYO GHOST</h3>
+<div class="mt-4 flex flex-wrap gap-1.5">
+<span class="cursor-pointer text-[10px] font-mono bg-cyberDark border border-slate-700 hover:border-neonCyan text-slate-300 px-2 py-1 rounded transition-colors" onclick="showHotspot('13B-REW Extended Bridgeport', 'Hand ported rotor housings by Master Fikron')">
+                  🔄 13B Bridgeport
+                </span>
+<span class="cursor-pointer text-[10px] font-mono bg-cyberDark border border-slate-700 hover:border-neonCyan text-slate-300 px-2 py-1 rounded transition-colors" onclick="showHotspot('BorgWarner EFR 8374', 'Internal wastegate with gamma-ti turbine wheel')">
+                  🌪️ BorgWarner EFR
+                </span>
+<span class="cursor-pointer text-[10px] font-mono bg-cyberDark border border-slate-700 hover:border-neonCyan text-slate-300 px-2 py-1 rounded transition-colors" onclick="showHotspot('Adaptronic Modular RX7 ECU', 'Rotary specific apex seal safety tables')">
+                  📟 Adaptronic Standalone
+                </span>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-cyberBorder flex items-center justify-between">
+<div class="font-mono text-xs text-slate-400">REDLINE: <span class="text-white font-bold">9,200 RPM</span></div>
+<button class="text-xs font-mono font-bold text-neonCyan hover:underline flex items-center gap-1" onclick="toggleBookingModal(true, 'Mazda RX7 Rotary Spec')">
+                BUILD SIMILAR ›
+              </button>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- END: FeaturedBuildsShowcase -->
+<!-- BEGIN: PerformancePackages -->
+<section class="py-16 bg-[#0a0c16] border-b border-cyberBorder/80" data-purpose="pricing-packages" id="packages">
+<div class="container mx-auto px-4 lg:px-8">
+<div class="text-center max-w-2xl mx-auto mb-12">
+<span class="font-mono text-xs uppercase tracking-widest text-neonCyan block mb-1">CALIBRATED STAGES // チューニングパッケージ</span>
+<h2 class="font-display text-3xl sm:text-4xl font-black text-white uppercase tracking-wider">PERFORMANCE PACKAGES</h2>
+<p class="text-slate-400 text-sm mt-2 font-mono">
+          Transparent JDM tuning tiers backed by Shibuya dyno verification and 12-month track guarantee.
+        </p>
+</div>
+<!-- 4 Tier Packages Grid (Matches Image 1: Street, Stage 2, Stage 3, Track) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+<!-- Package 1: STREET -->
+<div class="bg-cyberCard/90 border border-cyberBorder p-6 rounded-xl flex flex-col justify-between transition-all hover:border-slate-500">
+<div>
+<div class="text-xs font-mono text-slate-400 uppercase tracking-widest">TIER 01</div>
+<h3 class="font-display text-2xl font-black text-white uppercase mt-1">STREET</h3>
+<p class="text-xs text-slate-400 font-sans mt-1">Fast road response &amp; refined everyday reliability.</p>
+<div class="mt-6 mb-6">
+<div class="text-3xl font-black font-mono text-white">$1,500<span class="text-xs font-normal text-slate-500">+</span></div>
+<div class="text-[11px] font-mono text-neonCyan">+50 to +80 WHP GAIN</div>
+</div>
+<ul class="space-y-2.5 text-xs text-slate-300 font-mono border-t border-cyberBorder pt-4">
+<li class="flex items-center gap-2">✓ ECU Remap (98 Octane / E10)</li>
+<li class="flex items-center gap-2">✓ High-Flow Air Intake Filter</li>
+<li class="flex items-center gap-2">✓ Spark Plugs Heat Range 8</li>
+<li class="flex items-center gap-2">✓ Baseline Dyno Health Run</li>
+</ul>
+</div>
+<button class="mt-8 w-full py-2.5 bg-black/60 hover:bg-slate-800 text-white font-mono text-xs font-bold tracking-widest uppercase border border-slate-700 rounded cyber-clip transition-all" onclick="toggleBookingModal(true, 'Street Package ($1,500+)')">
+            CHOOSE PACKAGE
+          </button>
+</div>
+<!-- Package 2: STAGE 2 (Highlighted with Hot Pink Border & Badge like Image 1) -->
+<div class="bg-[#111425] border-2 border-neonMagenta p-6 rounded-xl flex flex-col justify-between relative shadow-magentaGlow transform lg:-translate-y-2">
+<!-- Featured Badge -->
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-neonMagenta text-white text-[10px] font-mono font-bold uppercase tracking-widest px-3 py-1 rounded cyber-clip-badge shadow-md">
+            MOST POPULAR
+          </div>
+<div>
+<div class="text-xs font-mono text-neonMagenta uppercase tracking-widest">TIER 02 // STREET WEAPON</div>
+<h3 class="font-display text-2xl font-black text-white uppercase mt-1">STAGE 2</h3>
+<p class="text-xs text-slate-300 font-sans mt-1">Full exhaust hardware, aggressive boost &amp; flames.</p>
+<div class="mt-6 mb-6">
+<div class="text-3xl font-black font-mono text-white">$3,500<span class="text-xs font-normal text-slate-500">+</span></div>
+<div class="text-[11px] font-mono text-neonMagenta font-bold">+120 to +180 WHP GAIN</div>
+</div>
+<ul class="space-y-2.5 text-xs text-slate-200 font-mono border-t border-cyberBorder pt-4">
+<li class="flex items-center gap-2 text-neonCyan">★ High-Flow Downpipe &amp; Decat</li>
+<li class="flex items-center gap-2">✓ Intercooler Core Upgrade</li>
+<li class="flex items-center gap-2">✓ High-Pressure Fuel Pump</li>
+<li class="flex items-center gap-2">✓ 4-Hour Shibuya Dyno Tuning</li>
+<li class="flex items-center gap-2">✓ Switchable Pops &amp; Bangs Map</li>
+</ul>
+</div>
+<button class="mt-8 w-full py-3 bg-neonMagenta hover:bg-white text-white hover:text-black font-mono text-xs font-bold tracking-widest uppercase rounded cyber-clip shadow-magentaGlow transition-all" onclick="toggleBookingModal(true, 'Stage 2 Package ($3,500+)')">
+            CHOOSE PACKAGE ⚡
+          </button>
+</div>
+<!-- Package 3: STAGE 3 -->
+<div class="bg-cyberCard/90 border border-cyberBorder p-6 rounded-xl flex flex-col justify-between transition-all hover:border-neonCyan">
+<div>
+<div class="text-xs font-mono text-slate-400 uppercase tracking-widest">TIER 03</div>
+<h3 class="font-display text-2xl font-black text-white uppercase mt-1">STAGE 3</h3>
+<p class="text-xs text-slate-400 font-sans mt-1">Bespoke big turbocharger, forged block components.</p>
+<div class="mt-6 mb-6">
+<div class="text-3xl font-black font-mono text-white">$8,500<span class="text-xs font-normal text-slate-500">+</span></div>
+<div class="text-[11px] font-mono text-neonCyan">+250 to +380 WHP GAIN</div>
+</div>
+<ul class="space-y-2.5 text-xs text-slate-300 font-mono border-t border-cyberBorder pt-4">
+<li class="flex items-center gap-2">✓ Garrett/BorgWarner Big Turbo</li>
+<li class="flex items-center gap-2">✓ Forged Rods &amp; Pistons Assembly</li>
+<li class="flex items-center gap-2">✓ 1300cc Injectors + E85 Sensor</li>
+<li class="flex items-center gap-2">✓ Upgraded DCT/Clutch Pack</li>
+<li class="flex items-center gap-2">✓ Custom TCU Transmission Flash</li>
+</ul>
+</div>
+<button class="mt-8 w-full py-2.5 bg-black/60 hover:bg-slate-800 text-white font-mono text-xs font-bold tracking-widest uppercase border border-slate-700 rounded cyber-clip transition-all" onclick="toggleBookingModal(true, 'Stage 3 Package ($8,500+)')">
+            CHOOSE PACKAGE
+          </button>
+</div>
+<!-- Package 4: TRACK / TIME ATTACK -->
+<div class="bg-cyberCard/90 border border-cyberBorder p-6 rounded-xl flex flex-col justify-between transition-all hover:border-matrixGreen">
+<div>
+<div class="text-xs font-mono text-slate-400 uppercase tracking-widest">TIER 04 // COMPETITION</div>
+<h3 class="font-display text-2xl font-black text-white uppercase mt-1">TRACK / ATTACK</h3>
+<p class="text-xs text-slate-400 font-sans mt-1">Uncompromising Tsukuba &amp; Fuji circuit engineering.</p>
+<div class="mt-6 mb-6">
+<div class="text-3xl font-black font-mono text-white">CUSTOM</div>
+<div class="text-[11px] font-mono text-matrixGreen">TARGET SPECIFIC TARGET</div>
+</div>
+<ul class="space-y-2.5 text-xs text-slate-300 font-mono border-t border-cyberBorder pt-4">
+<li class="flex items-center gap-2">✓ FIA Roll Cage Construction</li>
+<li class="flex items-center gap-2">✓ MoTeC / Life Racing ECU System</li>
+<li class="flex items-center gap-2">✓ Sequential Gearbox Integration</li>
+<li class="flex items-center gap-2">✓ Carbon Aero Downforce Package</li>
+<li class="flex items-center gap-2">✓ Trackside Pit &amp; Engineer Support</li>
+</ul>
+</div>
+<button class="mt-8 w-full py-2.5 bg-black/60 hover:bg-slate-800 text-white font-mono text-xs font-bold tracking-widest uppercase border border-slate-700 rounded cyber-clip transition-all" onclick="toggleBookingModal(true, 'Track / Time Attack Custom Build')">
+            INQUIRE NOW
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- END: PerformancePackages -->
+<!-- BEGIN: TestimonialsAndGarageLocation -->
+<section class="py-16 bg-cyberDark border-b border-cyberBorder/80" data-purpose="testimonials-and-lab" id="about">
+<div class="container mx-auto px-4 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<!-- Left Column: Owner Testimonials -->
+<div class="lg:col-span-6 space-y-6">
+<div>
+<span class="font-mono text-xs uppercase tracking-widest text-neonCyan block mb-1">VERIFIED JDM PILOTS // パイロット評価</span>
+<h2 class="font-display text-3xl font-black text-white uppercase tracking-wider">TRUSTED BY ENTHUSIASTS</h2>
+</div>
+<!-- Testimonial 1 -->
+<div class="bg-cyberCard border border-cyberBorder p-5 rounded-lg relative">
+<p class="text-slate-300 text-sm italic font-medium leading-relaxed">
+              "Fikron completely transformed my R35. The Stage 3 delivery is smoother than OEM around Daikoku, but when you drop the pedal at Wangan, it's violent acceleration without knock."
+            </p>
+<div class="mt-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-neonCyan/20 border border-neonCyan flex items-center justify-center font-mono font-bold text-xs text-neonCyan">
+                  AK
+                </div>
+<div>
+<div class="text-sm font-bold text-white">Akira Takahashi</div>
+<div class="text-xs font-mono text-slate-400">Nissan GT-R Nismo (852 WHP)</div>
+</div>
+</div>
+<div class="text-neonCyan font-mono text-xs">★★★★★ 5.0</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-cyberCard border border-cyberBorder p-5 rounded-lg relative">
+<p class="text-slate-300 text-sm italic font-medium leading-relaxed">
+              "The rotary bridgeport sound on my FD is iconic. The Haltech safety calibration saved my motor during high intake heat at Tsukuba circuit. 10/10 master engineers."
+            </p>
+<div class="mt-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-neonMagenta/20 border border-neonMagenta flex items-center justify-center font-mono font-bold text-xs text-neonMagenta">
+                  KS
+                </div>
+<div>
+<div class="text-sm font-bold text-white">Kenji Sato</div>
+<div class="text-xs font-mono text-slate-400">Mazda RX-7 FD3S Time Attack</div>
+</div>
+</div>
+<div class="text-neonMagenta font-mono text-xs">★★★★★ 5.0</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Tokyo Shibuya Underground Workshop -->
+<div class="lg:col-span-6 bg-[#0a0c16] border border-cyberBorder p-6 rounded-2xl relative overflow-hidden">
+<div class="relative h-64 rounded-xl overflow-hidden mb-6 border border-slate-800">
+<img alt="Fikron Performance Tokyo Workshop" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBu5wdATZpt_QBxqDGXFwb0lgxsDFraHD8-gq_lT-kafgCFDppBkvRKCScUpTCfWKhyDQsOEfN3B0Iqj5vtucKBfhP7Hf3FOUTthIQOM3f3pEI1gbBCcuZNWuHf5vq8IJbRAHrt9RboQTtKgSXGqN71f41NGHogm22HynTtOocUWv2hllu8gVRfGuyVh05Pkcw1BPx1nJOK9drGBHYKWxVir5vPBXRaCA6T2qVDj6RsPsu7OMnYTTri"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+<div class="absolute bottom-3 left-3 bg-black/80 px-3 py-1.5 rounded font-mono text-xs text-white border border-cyberBorder">
+              📍 SHIBUYA DISTRICT 7 // 24/7 DYNO LAB
+            </div>
+</div>
+<div class="space-y-3 font-mono text-xs">
+<div class="flex items-center justify-between border-b border-cyberBorder/60 pb-2">
+<span class="text-slate-400">WORKSHOP ADDRESS:</span>
+<span class="text-white text-right">3-24-11 Udagawacho, Shibuya-ku, Tokyo 150-0042</span>
+</div>
+<div class="flex items-center justify-between border-b border-cyberBorder/60 pb-2">
+<span class="text-slate-400">OPERATING HOURS:</span>
+<span class="text-neonCyan">TUE - SUN // 10:00 - 23:00 JST</span>
+</div>
+<div class="flex items-center justify-between border-b border-cyberBorder/60 pb-2">
+<span class="text-slate-400">FACILITY CAPACITY:</span>
+<span class="text-matrixGreen">4 All-Wheel Dyno Cells + Fabrication Bay</span>
+</div>
+</div>
+<button class="mt-6 w-full py-3 bg-neonCyan text-black font-mono font-bold text-xs uppercase tracking-widest cyber-clip hover:bg-white transition-all shadow-cyanGlow" onclick="toggleBookingModal(true)">
+            SCHEDULE WORKSHOP INSPECTION
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- END: TestimonialsAndGarageLocation -->
+<!-- BEGIN: BottomCTABanner -->
+<section class="py-14 bg-gradient-to-r from-[#0d0f18] via-[#151326] to-[#0d0f18] border-b border-cyberBorder/80 text-center relative overflow-hidden" data-purpose="conversion-banner">
+<div class="container mx-auto px-4 lg:px-8 relative z-10 max-w-3xl">
+<h2 class="font-display text-3xl sm:text-4xl font-black text-white uppercase tracking-tight">
+        READY TO UNLEASH <br/><span class="text-neonCyan neon-text-cyan">YOUR MACHINE?</span>
+</h2>
+<p class="text-slate-300 text-sm sm:text-base mt-3 max-w-xl mx-auto font-medium">
+        Reserve your Shibuya dyno diagnostic slot today. Our senior tuners will inspect your logs, boost curve, and deliver a tailored roadmap.
+      </p>
+<div class="mt-6 flex flex-wrap justify-center gap-4">
+<button class="px-8 py-3.5 bg-neonCyan hover:bg-white text-black font-mono font-bold text-xs tracking-widest uppercase cyber-clip transition-all shadow-cyanGlow" onclick="toggleBookingModal(true)">
+          START 3-CLICK BOOKING ⚡
+        </button>
+<a class="px-8 py-3.5 bg-cyberCard border border-cyberBorder hover:border-neonMagenta text-white font-mono font-bold text-xs tracking-widest uppercase cyber-clip transition-all" href="tel:+81389213457">
+          DIRECT LINE TO MASTER TUNER
+        </a>
+</div>
+</div>
+</section>
+<!-- END: BottomCTABanner -->
+<!-- BEGIN: MainFooter -->
+<footer class="bg-black py-12 text-slate-400 font-sans text-xs border-t border-cyberBorder" data-purpose="main-footer">
+<div class="container mx-auto px-4 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+<!-- Brand Description -->
+<div class="lg:col-span-2 space-y-4">
+<div class="flex items-center gap-3">
+<span class="font-display font-black text-lg text-white tracking-widest">
+              FIKRON <span class="text-neonCyan">PERFORMANCE</span>
+</span>
+</div>
+<p class="text-slate-400 text-xs leading-relaxed max-w-sm">
+            High-tech digital motorsport garage and dyno testing facility based in Shibuya, Tokyo. Dedicated to pushing the mechanical and electronic boundaries of Japanese sports cars.
+          </p>
+<div class="font-mono text-[11px] text-neonMagenta">
+            © 2025 fikron website | All System Telemetry Reserved.
+          </div>
+</div>
+<!-- Quick Links -->
+<div>
+<h4 class="font-mono text-white uppercase tracking-widest mb-3 font-bold">NAVIGATION</h4>
+<ul class="space-y-2 font-mono">
+<li><a class="hover:text-neonCyan transition-colors" href="#hero">Home Base</a></li>
+<li><a class="hover:text-neonCyan transition-colors" href="#services">Engineering Services</a></li>
+<li><a class="hover:text-neonCyan transition-colors" href="#dyno-lab">Dyno Simulator</a></li>
+<li><a class="hover:text-neonCyan transition-colors" href="#builds">Project Gallery</a></li>
+<li><a class="hover:text-neonCyan transition-colors" href="#packages">Tuning Packages</a></li>
+</ul>
+</div>
+<!-- Services -->
+<div>
+<h4 class="font-mono text-white uppercase tracking-widest mb-3 font-bold">SPECIALTIES</h4>
+<ul class="space-y-2 font-mono">
+<li><span class="text-slate-300">VR38DETT Engine Builds</span></li>
+<li><span class="text-slate-300">B58 / 2JZ Turbo Kits</span></li>
+<li><span class="text-slate-300">13B Rotary Bridgeports</span></li>
+<li><span class="text-slate-300">Custom Wiring Looms</span></li>
+<li><span class="text-slate-300">Hub Dyno Retarder Testing</span></li>
+</ul>
+</div>
+<!-- Social & Workshop Info -->
+<div>
+<h4 class="font-mono text-white uppercase tracking-widest mb-3 font-bold">CONNECT</h4>
+<div class="flex gap-3 mb-4">
+<a class="w-8 h-8 rounded bg-cyberCard border border-cyberBorder hover:border-neonCyan flex items-center justify-center text-slate-300 hover:text-neonCyan transition-colors" href="#">
+              IG
+            </a>
+<a class="w-8 h-8 rounded bg-cyberCard border border-cyberBorder hover:border-neonCyan flex items-center justify-center text-slate-300 hover:text-neonCyan transition-colors" href="#">
+              YT
+            </a>
+<a class="w-8 h-8 rounded bg-cyberCard border border-cyberBorder hover:border-neonCyan flex items-center justify-center text-slate-300 hover:text-neonCyan transition-colors" href="#">
+              X
+            </a>
+</div>
+<div class="text-[11px] font-mono text-slate-400">
+            DISCORD: <span class="text-neonCyan">#fikron-tokyo-dyno</span>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-cyberBorder/60 flex flex-col sm:flex-row items-center justify-between text-[11px] font-mono text-slate-500">
+<div>BUILT WITH HIGH-OCTANE CYBERPUNK STANDARDS // FIKRON TOKYO HQ</div>
+<div class="mt-2 sm:mt-0 flex gap-4">
+<a class="hover:underline" href="#">CAN-BUS Privacy</a>
+<a class="hover:underline" href="#">Warranty Terms</a>
+<a class="hover:underline" href="#">Safety Protocols</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- END: MainFooter -->
+<!-- BEGIN: InteractiveBookingModal [AKSI GACOR #2] -->
+<div class="fixed inset-0 z-50 hidden bg-black/85 backdrop-blur-md flex items-center justify-center p-4" id="booking-modal">
+<div class="bg-cyberCard border-2 border-neonCyan rounded-2xl max-w-xl w-full p-6 sm:p-8 shadow-cyanGlow relative animate-in fade-in zoom-in duration-200">
+<!-- Close Button -->
+<button class="absolute top-4 right-4 text-slate-400 hover:text-white p-2" onclick="toggleBookingModal(false)">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+<!-- Modal Title -->
+<div class="mb-6">
+<span class="font-mono text-xs uppercase tracking-widest text-neonCyan font-bold">⚡ 3-CLICK INSTANT RESERVATION</span>
+<h3 class="font-display text-2xl font-black text-white uppercase mt-1">RESERVE DYNO BAY // TOKYO GARAGE</h3>
+</div>
+<!-- 3-Step Dynamic Form -->
+<form class="space-y-4 font-mono text-xs" id="booking-form" onsubmit="handleBookingSubmit(event)">
+<!-- Step 1: Service Package Selection -->
+<div>
+<label class="block text-slate-300 uppercase mb-1 font-bold">1. Select Package / Service</label>
+<select class="w-full bg-black/80 border border-cyberBorder text-white rounded p-3 focus:border-neonCyan focus:ring-0" id="modal-service-select">
+<option value="Stage 2 Tuning Package ($3,500+)">Stage 2 Tuning Package (Downpipe + E85 Flex Map)</option>
+<option value="Street Package ($1,500+)">Street Package (ECU Optimization &amp; Dyno Run)</option>
+<option value="Stage 3 Big Turbo Build ($8,500+)">Stage 3 Big Turbo Build (Forged Engine Package)</option>
+<option value="Dyno Baseline Diagnostic ($450)">Dyno Baseline Diagnostic &amp; Wideband Log (3 Pulls)</option>
+<option value="Custom Time-Attack Circuit Build">Custom Track / Time-Attack Consultation</option>
+</select>
+</div>
+<!-- Step 2: Date & Slot Pick -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<div>
+<label class="block text-slate-300 uppercase mb-1 font-bold">2. Reservation Date</label>
+<input class="w-full bg-black/80 border border-cyberBorder text-white rounded p-3 focus:border-neonCyan focus:ring-0" required="" type="date" value="2025-05-15"/>
+</div>
+<div>
+<label class="block text-slate-300 uppercase mb-1 font-bold">Dyno Bay Shift</label>
+<select class="w-full bg-black/80 border border-cyberBorder text-white rounded p-3 focus:border-neonCyan focus:ring-0">
+<option>Morning (10:00 - 13:00 JST)</option>
+<option>Afternoon (14:00 - 17:00 JST)</option>
+<option selected="">Night Session (19:00 - 22:00 JST)</option>
+</select>
+</div>
+</div>
+<!-- Step 3: Vehicle & Contact Info -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<div>
+<label class="block text-slate-300 uppercase mb-1 font-bold">Vehicle Model &amp; Year</label>
+<input class="w-full bg-black/80 border border-cyberBorder text-white rounded p-3 focus:border-neonCyan focus:ring-0" placeholder="e.g. 2018 Nissan GT-R Nismo" required="" type="text"/>
+</div>
+<div>
+<label class="block text-slate-300 uppercase mb-1 font-bold">Pilot Name / WhatsApp</label>
+<input class="w-full bg-black/80 border border-cyberBorder text-white rounded p-3 focus:border-neonCyan focus:ring-0" placeholder="Your Name / Phone Number" required="" type="text"/>
+</div>
+</div>
+<!-- Confirmation Note -->
+<div class="p-3 bg-neonCyan/10 border border-neonCyan/30 rounded text-[11px] text-neonCyan">
+          ✓ Real-time slot locking: You will receive an instant confirmation PIN &amp; workshop telemetry token via WhatsApp.
+        </div>
+<button class="w-full py-3.5 bg-neonCyan hover:bg-white text-black font-mono font-bold text-sm tracking-widest uppercase rounded cyber-clip transition-all shadow-cyanGlow" type="submit">
+          CONFIRM INSTANT RESERVATION ⚡
+        </button>
+</form>
+</div>
+</div>
+<!-- END: InteractiveBookingModal -->
+<!-- BEGIN: ComponentHotspotPopover [Aksi Gacor #3 Hotspot Modal] -->
+<div class="fixed inset-0 z-50 hidden bg-black/75 backdrop-blur-sm flex items-center justify-center p-4" id="hotspot-modal">
+<div class="bg-cyberCard border border-neonMagenta p-6 rounded-xl max-w-sm w-full shadow-magentaGlow relative">
+<div class="flex items-center justify-between border-b border-cyberBorder pb-2 mb-3">
+<span class="font-mono text-xs uppercase text-neonMagenta font-bold">COMPONENT SPEC SHEET</span>
+<button class="text-slate-400 hover:text-white text-sm" onclick="closeHotspot()">✕</button>
+</div>
+<h4 class="font-display font-bold text-lg text-white mb-2" id="hotspot-title">Component Name</h4>
+<p class="text-slate-300 text-xs font-mono mb-4 leading-relaxed" id="hotspot-desc">Description goes here.</p>
+<div class="flex gap-2">
+<button class="flex-1 py-2 bg-neonMagenta text-white font-mono text-xs font-bold rounded" onclick="closeHotspot(); toggleBookingModal(true)">
+          ADD TO BUILD QUOTE
+        </button>
+<button class="px-4 py-2 bg-black border border-slate-700 text-slate-300 font-mono text-xs rounded" onclick="closeHotspot()">
+          CLOSE
+        </button>
+</div>
+</div>
+</div>
+<!-- END: ComponentHotspotPopover -->
+<!-- BEGIN: JavaScriptInteractivity -->
+<!-- Audio & Dyno Rev Synthesis Logic -->
+<script data-purpose="virtual-dyno-audio">
+    let audioCtx = null;
+    let osc1 = null;
+    let osc2 = null;
+    let gainNode = null;
+    let isRevving = false;
+    let revAnimationId = null;
+    let currentRpm = 950;
+    const idleRpm = 950;
+    const maxRpm = 8200;
+
+    // Initialize Web Audio Context on first interaction
+    function initAudio() {
+      if (!audioCtx) {
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        audioCtx = new AudioContext();
+      }
+    }
+
+    function startEngineSound() {
+      initAudio();
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+
+      // Create dual oscillators for twin-turbo / rotary exhaust rumble
+      osc1 = audioCtx.createOscillator();
+      osc2 = audioCtx.createOscillator();
+      gainNode = audioCtx.createGain();
+
+      osc1.type = 'sawtooth';
+      osc2.type = 'triangle';
+
+      osc1.frequency.setValueAtTime(55, audioCtx.currentTime);
+      osc2.frequency.setValueAtTime(110, audioCtx.currentTime);
+
+      gainNode.gain.setValueAtTime(0.08, audioCtx.currentTime);
+
+      osc1.connect(gainNode);
+      osc2.connect(gainNode);
+      gainNode.connect(audioCtx.destination);
+
+      osc1.start();
+      osc2.start();
+    }
+
+    function rampUpSound() {
+      if (!audioCtx || !osc1) return;
+      const now = audioCtx.currentTime;
+      // Ramp oscillator pitch to simulate high RPM scream
+      osc1.frequency.setTargetAtTime(260, now, 0.4);
+      osc2.frequency.setTargetAtTime(520, now, 0.4);
+      gainNode.gain.setTargetAtTime(0.22, now, 0.2);
+    }
+
+    function rampDownSound() {
+      if (!audioCtx || !osc1) return;
+      const now = audioCtx.currentTime;
+      osc1.frequency.setTargetAtTime(55, now, 0.3);
+      osc2.frequency.setTargetAtTime(110, now, 0.3);
+      gainNode.gain.setTargetAtTime(0.08, now, 0.3);
+
+      // Simulate blow-off valve hiss / pop
+      triggerBlowOffSound();
+    }
+
+    function triggerBlowOffSound() {
+      try {
+        if (!audioCtx) return;
+        const noiseBuffer = audioCtx.createBuffer(1, audioCtx.sampleRate * 0.25, audioCtx.sampleRate);
+        const output = noiseBuffer.getChannelData(0);
+        for (let i = 0; i < noiseBuffer.length; i++) {
+          output[i] = Math.random() * 2 - 1;
+        }
+        const whiteNoise = audioCtx.createBufferSource();
+        whiteNoise.buffer = noiseBuffer;
+        const filter = audioCtx.createBiquadFilter();
+        filter.type = 'bandpass';
+        filter.frequency.value = 1800;
+
+        const noiseGain = audioCtx.createGain();
+        noiseGain.gain.setValueAtTime(0.18, audioCtx.currentTime);
+        noiseGain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.25);
+
+        whiteNoise.connect(filter);
+        filter.connect(noiseGain);
+        noiseGain.connect(audioCtx.destination);
+        whiteNoise.start();
+      } catch (e) {
+        // Audio fallback safe
+      }
+    }
+
+    // Tachometer visual update loop
+    function updateTachometer() {
+      const tachArc = document.getElementById('tachometer-arc');
+      const rpmDigital = document.getElementById('rpm-digital');
+      const boostReadout = document.getElementById('boost-readout');
+      const flameEffect = document.getElementById('flame-effect');
+
+      if (isRevving) {
+        if (currentRpm < maxRpm) {
+          currentRpm += 120;
+          if (currentRpm > maxRpm) currentRpm = maxRpm;
+        }
+      } else {
+        if (currentRpm > idleRpm) {
+          currentRpm -= 140;
+          if (currentRpm < idleRpm) currentRpm = idleRpm;
+        }
+      }
+
+      // Format digital number with leading zeros
+      rpmDigital.textContent = currentRpm.toString().padStart(4, '0');
+
+      // Calculate stroke dashoffset for the 377 total circumference arc
+      const fraction = (currentRpm - idleRpm) / (maxRpm - idleRpm);
+      const offset = 377 - (fraction * 280);
+      tachArc.style.strokeDashoffset = offset;
+
+      // Color shift when near redline
+      if (currentRpm > 7200) {
+        tachArc.style.stroke = '#ff0055';
+        if (flameEffect) flameEffect.style.opacity = '1';
+        boostReadout.textContent = '28.4 PSI (PEAK)';
+        boostReadout.className = 'text-neonMagenta font-black animate-pulse';
+      } else {
+        tachArc.style.stroke = '#00f0ff';
+        if (flameEffect) flameEffect.style.opacity = '0';
+        const simulatedPsi = (fraction * 28.4).toFixed(1);
+        boostReadout.textContent = `${simulatedPsi} PSI`;
+        boostReadout.className = 'text-neonCyan font-bold';
+      }
+
+      revAnimationId = requestAnimationFrame(updateTachometer);
+    }
+
+    // Attach Event Listeners to Gas Pedal Button
+    window.addEventListener('DOMContentLoaded', () => {
+      const gasBtn = document.getElementById('gas-pedal-btn');
+
+      const startRev = (e) => {
+        e.preventDefault();
+        if (!isRevving) {
+          isRevving = true;
+          startEngineSound();
+          rampUpSound();
+        }
+      };
+
+      const stopRev = (e) => {
+        e.preventDefault();
+        if (isRevving) {
+          isRevving = false;
+          rampDownSound();
+        }
+      };
+
+      // Mouse events
+      gasBtn.addEventListener('mousedown', startRev);
+      window.addEventListener('mouseup', stopRev);
+
+      // Touch events for mobile/tablet
+      gasBtn.addEventListener('touchstart', startRev, { passive: false });
+      window.addEventListener('touchend', stopRev, { passive: false });
+
+      // Start tachometer loop
+      updateTachometer();
+    });
+
+    // Dyno Simulator Car & Stage Configuration
+    const carSpecs = {
+      gtr: { hp: 852, tq: 768, boost: '28.4 PSI (Twin EFR)' },
+      supra: { hp: 680, tq: 640, boost: '24.2 PSI (Pure800)' },
+      rx7: { hp: 520, tq: 430, boost: '19.5 PSI (BorgWarner)' },
+      civic: { hp: 460, tq: 410, boost: '22.0 PSI (K20 Hybrid)' }
+    };
+
+    let selectedCar = 'gtr';
+    let selectedStageMultiplier = 1.0;
+
+    function setSimCar(carKey) {
+      selectedCar = carKey;
+      document.querySelectorAll('#car-selector-buttons .car-btn').forEach(btn => {
+        if (btn.getAttribute('data-car') === carKey) {
+          btn.classList.add('border-neonCyan', 'text-white');
+          btn.classList.remove('border-cyberBorder', 'text-slate-300');
+        } else {
+          btn.classList.remove('border-neonCyan', 'text-white');
+          btn.classList.add('border-cyberBorder', 'text-slate-300');
+        }
+      });
+      recalculateDyno();
+    }
+
+    function setSimStage(stage) {
+      if (stage === 'stock') selectedStageMultiplier = 0.68;
+      else if (stage === 'stage2') selectedStageMultiplier = 0.85;
+      else selectedStageMultiplier = 1.0;
+      recalculateDyno();
+    }
+
+    function recalculateDyno() {
+      const base = carSpecs[selectedCar];
+      const finalHp = Math.round(base.hp * selectedStageMultiplier);
+      const finalTq = Math.round(base.tq * selectedStageMultiplier);
+
+      document.getElementById('dyno-sim-hp').textContent = `${finalHp} WHP`;
+      document.getElementById('dyno-sim-tq').textContent = `${finalTq} LB-FT`;
+      document.getElementById('dyno-sim-boost').textContent = base.boost;
+    }
+  </script>
+<!-- Interactive Modal, Hotspots, and UI Helpers -->
+<script data-purpose="ui-interactions">
+    // Toggle 3-Click Booking Modal
+    function toggleBookingModal(show, preselectedPackage = '') {
+      const modal = document.getElementById('booking-modal');
+      if (show) {
+        modal.classList.remove('hidden');
+        if (preselectedPackage) {
+          const select = document.getElementById('modal-service-select');
+          if (select) {
+            // Find or insert value
+            select.value = preselectedPackage;
+          }
+        }
+      } else {
+        modal.classList.add('hidden');
+      }
+    }
+
+    // Toggle Mobile Navigation Drawer
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    }
+
+    // Handle Booking Form Submission
+    function handleBookingSubmit(e) {
+      e.preventDefault();
+      alert("⚡ RESERVATION CONFIRMED!\n\nYour Tokyo Dyno bay has been locked. Check your phone for telemetry CAN-BUS token and garage gate PIN.");
+      toggleBookingModal(false);
+    }
+
+    // Hotspot Popover Handler (Aksi Gacor #3)
+    function showHotspot(title, description) {
+      const modal = document.getElementById('hotspot-modal');
+      document.getElementById('hotspot-title').textContent = title;
+      document.getElementById('hotspot-desc').textContent = description;
+      modal.classList.remove('hidden');
+    }
+
+    function closeHotspot() {
+      document.getElementById('hotspot-modal').classList.add('hidden');
+    }
+
+    // Close Modals on ESC Key
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        toggleBookingModal(false);
+        closeHotspot();
+      }
+    });
+  </script>
+<!-- END: JavaScriptInteractivity -->
+</body></html>
